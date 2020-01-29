@@ -22,24 +22,26 @@ Fetch order by UUID
 ### Example
 
 ```javascript
-import Bottega from 'bottega';
+var Bottega = require('bottega');
 
-let apiInstance = new Bottega.OrdersApi();
-let orderNumber = "orderNumber_example"; // String | 
-let opts = {
+var apiInstance = new Bottega.OrdersApi();
+var orderNumber = "orderNumber_example"; // String | 
+var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
-apiInstance.orderOrderNumberGet(orderNumber, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.orderOrderNumberGet(orderNumber, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -73,25 +75,27 @@ Pay for an Order, marking it as ready for processing
 ### Example
 
 ```javascript
-import Bottega from 'bottega';
+var Bottega = require('bottega');
 
-let apiInstance = new Bottega.OrdersApi();
-let orderNumber = "orderNumber_example"; // String | 
-let body = "body_example"; // String | 
-let opts = {
+var apiInstance = new Bottega.OrdersApi();
+var orderNumber = "orderNumber_example"; // String | 
+var body = "body_example"; // String | 
+var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
-apiInstance.orderOrderNumberPayPost(orderNumber, body, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.orderOrderNumberPayPost(orderNumber, body, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -126,24 +130,26 @@ Create a new Order
 ### Example
 
 ```javascript
-import Bottega from 'bottega';
+var Bottega = require('bottega');
 
-let apiInstance = new Bottega.OrdersApi();
-let body = new Bottega.BuyingOption(); // BuyingOption | 
-let opts = {
+var apiInstance = new Bottega.OrdersApi();
+var body = new Bottega.BuyingOption(); // BuyingOption | 
+var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
-apiInstance.orderPost(body, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.orderPost(body, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -177,24 +183,26 @@ Handles Nets payment response
 ### Example
 
 ```javascript
-import Bottega from 'bottega';
+var Bottega = require('bottega');
 
-let apiInstance = new Bottega.OrdersApi();
-let opts = {
+var apiInstance = new Bottega.OrdersApi();
+var opts = {
   'processAuthToken': "processAuthToken_example", // String | 
   'transactionId': "transactionId_example", // String | 
   'responseCode': "responseCode_example" // String | 
 };
-apiInstance.orderProcessOrderGet(opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.orderProcessOrderGet(opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
