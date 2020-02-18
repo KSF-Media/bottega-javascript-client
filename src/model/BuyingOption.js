@@ -42,16 +42,16 @@
    * Constructs a new <code>BuyingOption</code>.
    * @alias module:model/BuyingOption
    * @class
-   * @param buyingOptionPackage {String} 
-   * @param buyingOptionPeriod {Number} 
-   * @param buyingOptionPayAmountCents {Number} 
+   * @param packageId {String} 
+   * @param period {Number} 
+   * @param payAmountCents {Number} 
    */
-  var exports = function(buyingOptionPackage, buyingOptionPeriod, buyingOptionPayAmountCents) {
+  var exports = function(packageId, period, payAmountCents) {
     var _this = this;
 
-    _this['buyingOptionPackage'] = buyingOptionPackage;
-    _this['buyingOptionPeriod'] = buyingOptionPeriod;
-    _this['buyingOptionPayAmountCents'] = buyingOptionPayAmountCents;
+    _this['packageId'] = packageId;
+    _this['period'] = period;
+    _this['payAmountCents'] = payAmountCents;
   };
 
   /**
@@ -64,31 +64,31 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('buyingOptionPackage')) {
-        obj['buyingOptionPackage'] = ApiClient.convertToType(data['buyingOptionPackage'], 'String');
+      if (data.hasOwnProperty('packageId')) {
+        obj['packageId'] = ApiClient.convertToType(data['packageId'], 'String');
       }
-      if (data.hasOwnProperty('buyingOptionPeriod')) {
-        obj['buyingOptionPeriod'] = ApiClient.convertToType(data['buyingOptionPeriod'], 'Number');
+      if (data.hasOwnProperty('period')) {
+        obj['period'] = ApiClient.convertToType(data['period'], 'Number');
       }
-      if (data.hasOwnProperty('buyingOptionPayAmountCents')) {
-        obj['buyingOptionPayAmountCents'] = ApiClient.convertToType(data['buyingOptionPayAmountCents'], 'Number');
+      if (data.hasOwnProperty('payAmountCents')) {
+        obj['payAmountCents'] = ApiClient.convertToType(data['payAmountCents'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} buyingOptionPackage
+   * @member {String} packageId
    */
-  exports.prototype['buyingOptionPackage'] = undefined;
+  exports.prototype['packageId'] = undefined;
   /**
-   * @member {Number} buyingOptionPeriod
+   * @member {Number} period
    */
-  exports.prototype['buyingOptionPeriod'] = undefined;
+  exports.prototype['period'] = undefined;
   /**
-   * @member {Number} buyingOptionPayAmountCents
+   * @member {Number} payAmountCents
    */
-  exports.prototype['buyingOptionPayAmountCents'] = undefined;
+  exports.prototype['payAmountCents'] = undefined;
 
 
 

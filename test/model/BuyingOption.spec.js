@@ -56,20 +56,20 @@
       //expect(instance).to.be.a(Bottega.BuyingOption);
     });
 
-    it('should have the property buyingOptionPackage (base name: "buyingOptionPackage")', function() {
-      // uncomment below and update the code to test the property buyingOptionPackage
+    it('should have the property packageId (base name: "packageId")', function() {
+      // uncomment below and update the code to test the property packageId
       //var instance = new Bottega.BuyingOption();
       //expect(instance).to.be();
     });
 
-    it('should have the property buyingOptionPeriod (base name: "buyingOptionPeriod")', function() {
-      // uncomment below and update the code to test the property buyingOptionPeriod
+    it('should have the property period (base name: "period")', function() {
+      // uncomment below and update the code to test the property period
       //var instance = new Bottega.BuyingOption();
       //expect(instance).to.be();
     });
 
-    it('should have the property buyingOptionPayAmountCents (base name: "buyingOptionPayAmountCents")', function() {
-      // uncomment below and update the code to test the property buyingOptionPayAmountCents
+    it('should have the property payAmountCents (base name: "payAmountCents")', function() {
+      // uncomment below and update the code to test the property payAmountCents
       //var instance = new Bottega.BuyingOption();
       //expect(instance).to.be();
     });

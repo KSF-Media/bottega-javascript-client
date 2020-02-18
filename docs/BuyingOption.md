@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**buyingOptionPackage** | **String** |  | 
-**buyingOptionPeriod** | **Number** |  | 
-**buyingOptionPayAmountCents** | **Number** |  | 
+**packageId** | **String** |  | 
+**period** | **Number** |  | 
+**payAmountCents** | **Number** |  | 
 
 

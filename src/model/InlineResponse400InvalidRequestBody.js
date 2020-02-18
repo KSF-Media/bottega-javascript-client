@@ -85,10 +85,10 @@
    */
   exports.DescriptionEnum = {
     /**
-     * value: "Couldn't parse the request body."
+     * value: "Could not parse the request body."
      * @const
      */
-    "Couldn&#39;t parse the request body.": "Couldn't parse the request body."  };
+    "Could not parse the request body.": "Could not parse the request body."  };
 
 
   return exports;

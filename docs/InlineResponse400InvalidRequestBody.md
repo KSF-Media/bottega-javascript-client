@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Enum: DescriptionEnum
 
 
-* `Couldn&#39;t parse the request body.` (value: `"Couldn't parse the request body."`)
+* `Could not parse the request body.` (value: `"Could not parse the request body."`)
 
 
 
