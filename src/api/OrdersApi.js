@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BuyingOption', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order'], factory);
+    define(['ApiClient', 'model/BuyingOption', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/PaymentTerminalUrl'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BuyingOption'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'));
+    module.exports = factory(require('../ApiClient'), require('../model/BuyingOption'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/PaymentTerminalUrl'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.BuyingOption, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order);
+    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.BuyingOption, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.PaymentTerminalUrl);
   }
-}(this, function(ApiClient, BuyingOption, InlineResponse400, InlineResponse415, Order) {
+}(this, function(ApiClient, BuyingOption, InlineResponse400, InlineResponse415, Order, PaymentTerminalUrl) {
   'use strict';
 
   /**
@@ -101,7 +101,7 @@
      * Callback function to receive the result of the orderOrderNumberPayPost operation.
      * @callback module:api/OrdersApi~orderOrderNumberPayPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Order} data The data returned by the service call.
+     * @param {module:model/PaymentTerminalUrl} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -113,7 +113,7 @@
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/OrdersApi~orderOrderNumberPayPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Order}
+     * data is of type: {@link module:model/PaymentTerminalUrl}
      */
     this.orderOrderNumberPayPost = function(orderNumber, body, opts, callback) {
       opts = opts || {};
@@ -144,7 +144,7 @@
       var authNames = [];
       var contentTypes = ['application/json;charset=utf-8'];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = Order;
+      var returnType = PaymentTerminalUrl;
       return this.apiClient.callApi(
         '/order/{orderNumber}/pay', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,

@@ -130,6 +130,7 @@ Class | Method | HTTP request | Description
  - [Bottega.OrderErrorReason](docs/OrderErrorReason.md)
  - [Bottega.OrderStatus](docs/OrderStatus.md)
  - [Bottega.PaymentOption](docs/PaymentOption.md)
+ - [Bottega.PaymentTerminalUrl](docs/PaymentTerminalUrl.md)
 
 
 ## Documentation for Authorization

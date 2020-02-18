@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BuyingOption', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/Order', 'model/OrderErrorReason', 'model/OrderStatus', 'model/PaymentOption', 'api/OrdersApi'], factory);
+    define(['ApiClient', 'model/BuyingOption', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/Order', 'model/OrderErrorReason', 'model/OrderStatus', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'api/OrdersApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BuyingOption'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/Order'), require('./model/OrderErrorReason'), require('./model/OrderStatus'), require('./model/PaymentOption'), require('./api/OrdersApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/BuyingOption'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/Order'), require('./model/OrderErrorReason'), require('./model/OrderStatus'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./api/OrdersApi'));
   }
-}(function(ApiClient, BuyingOption, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, Order, OrderErrorReason, OrderStatus, PaymentOption, OrdersApi) {
+}(function(ApiClient, BuyingOption, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, Order, OrderErrorReason, OrderStatus, PaymentOption, PaymentTerminalUrl, OrdersApi) {
   'use strict';
 
   /**
@@ -106,6 +106,11 @@
      * @property {module:model/PaymentOption}
      */
     PaymentOption: PaymentOption,
+    /**
+     * The PaymentTerminalUrl model constructor.
+     * @property {module:model/PaymentTerminalUrl}
+     */
+    PaymentTerminalUrl: PaymentTerminalUrl,
     /**
      * The OrdersApi service constructor.
      * @property {module:api/OrdersApi}

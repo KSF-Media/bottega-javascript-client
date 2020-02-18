@@ -66,7 +66,7 @@ No authorization required
 
 ## orderOrderNumberPayPost
 
-> Order orderOrderNumberPayPost(orderNumber, body, opts)
+> PaymentTerminalUrl orderOrderNumberPayPost(orderNumber, body, opts)
 
 
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Order**](Order.md)
+[**PaymentTerminalUrl**](PaymentTerminalUrl.md)
 
 ### Authorization
 
