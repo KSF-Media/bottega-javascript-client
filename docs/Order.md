@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderNumber** | **String** |  | 
-**orderUser** | **String** |  | 
-**orderStatus** | [**OrderStatus**](OrderStatus.md) |  | 
+**_number** | **String** |  | 
+**user** | **String** |  | 
+**status** | [**OrderStatus**](OrderStatus.md) |  | 
 
 

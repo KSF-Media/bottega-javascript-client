@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderCreated** | **String** |  | [optional] 
-**orderStarted** | **String** |  | [optional] 
-**orderCompleted** | **String** |  | [optional] 
-**orderFailed** | **[Object]** |  | [optional] 
+**state** | **String** |  | 
+**time** | **String** |  | 
+**failReason** | **String** |  | [optional] 
 
 

@@ -56,20 +56,20 @@
       //expect(instance).to.be.a(Bottega.Order);
     });
 
-    it('should have the property orderNumber (base name: "orderNumber")', function() {
-      // uncomment below and update the code to test the property orderNumber
+    it('should have the property _number (base name: "number")', function() {
+      // uncomment below and update the code to test the property _number
       //var instance = new Bottega.Order();
       //expect(instance).to.be();
     });
 
-    it('should have the property orderUser (base name: "orderUser")', function() {
-      // uncomment below and update the code to test the property orderUser
+    it('should have the property user (base name: "user")', function() {
+      // uncomment below and update the code to test the property user
       //var instance = new Bottega.Order();
       //expect(instance).to.be();
     });
 
-    it('should have the property orderStatus (base name: "orderStatus")', function() {
-      // uncomment below and update the code to test the property orderStatus
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new Bottega.Order();
       //expect(instance).to.be();
     });

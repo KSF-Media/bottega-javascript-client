@@ -56,26 +56,20 @@
       //expect(instance).to.be.a(Bottega.OrderStatus);
     });
 
-    it('should have the property orderCreated (base name: "OrderCreated")', function() {
-      // uncomment below and update the code to test the property orderCreated
+    it('should have the property state (base name: "state")', function() {
+      // uncomment below and update the code to test the property state
       //var instance = new Bottega.OrderStatus();
       //expect(instance).to.be();
     });
 
-    it('should have the property orderStarted (base name: "OrderStarted")', function() {
-      // uncomment below and update the code to test the property orderStarted
+    it('should have the property time (base name: "time")', function() {
+      // uncomment below and update the code to test the property time
       //var instance = new Bottega.OrderStatus();
       //expect(instance).to.be();
     });
 
-    it('should have the property orderCompleted (base name: "OrderCompleted")', function() {
-      // uncomment below and update the code to test the property orderCompleted
-      //var instance = new Bottega.OrderStatus();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property orderFailed (base name: "OrderFailed")', function() {
-      // uncomment below and update the code to test the property orderFailed
+    it('should have the property failReason (base name: "failReason")', function() {
+      // uncomment below and update the code to test the property failReason
       //var instance = new Bottega.OrderStatus();
       //expect(instance).to.be();
     });

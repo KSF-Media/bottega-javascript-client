@@ -42,10 +42,14 @@
    * Constructs a new <code>OrderStatus</code>.
    * @alias module:model/OrderStatus
    * @class
+   * @param state {String} 
+   * @param time {String} 
    */
-  var exports = function() {
+  var exports = function(state, time) {
     var _this = this;
 
+    _this['state'] = state;
+    _this['time'] = time;
   };
 
   /**
@@ -58,38 +62,31 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('OrderCreated')) {
-        obj['OrderCreated'] = ApiClient.convertToType(data['OrderCreated'], 'String');
+      if (data.hasOwnProperty('state')) {
+        obj['state'] = ApiClient.convertToType(data['state'], 'String');
       }
-      if (data.hasOwnProperty('OrderStarted')) {
-        obj['OrderStarted'] = ApiClient.convertToType(data['OrderStarted'], 'String');
+      if (data.hasOwnProperty('time')) {
+        obj['time'] = ApiClient.convertToType(data['time'], 'String');
       }
-      if (data.hasOwnProperty('OrderCompleted')) {
-        obj['OrderCompleted'] = ApiClient.convertToType(data['OrderCompleted'], 'String');
-      }
-      if (data.hasOwnProperty('OrderFailed')) {
-        obj['OrderFailed'] = ApiClient.convertToType(data['OrderFailed'], [Object]);
+      if (data.hasOwnProperty('failReason')) {
+        obj['failReason'] = ApiClient.convertToType(data['failReason'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} OrderCreated
+   * @member {String} state
    */
-  exports.prototype['OrderCreated'] = undefined;
+  exports.prototype['state'] = undefined;
   /**
-   * @member {String} OrderStarted
+   * @member {String} time
    */
-  exports.prototype['OrderStarted'] = undefined;
+  exports.prototype['time'] = undefined;
   /**
-   * @member {String} OrderCompleted
+   * @member {String} failReason
    */
-  exports.prototype['OrderCompleted'] = undefined;
-  /**
-   * @member {Array.<Object>} OrderFailed
-   */
-  exports.prototype['OrderFailed'] = undefined;
+  exports.prototype['failReason'] = undefined;
 
 
 

@@ -127,7 +127,6 @@ Class | Method | HTTP request | Description
  - [Bottega.InlineResponse415](docs/InlineResponse415.md)
  - [Bottega.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
  - [Bottega.Order](docs/Order.md)
- - [Bottega.OrderErrorReason](docs/OrderErrorReason.md)
  - [Bottega.OrderStatus](docs/OrderStatus.md)
  - [Bottega.PaymentOption](docs/PaymentOption.md)
  - [Bottega.PaymentTerminalUrl](docs/PaymentTerminalUrl.md)

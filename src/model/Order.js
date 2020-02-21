@@ -42,16 +42,16 @@
    * Constructs a new <code>Order</code>.
    * @alias module:model/Order
    * @class
-   * @param orderNumber {String} 
-   * @param orderUser {String} 
-   * @param orderStatus {module:model/OrderStatus} 
+   * @param _number {String} 
+   * @param user {String} 
+   * @param status {module:model/OrderStatus} 
    */
-  var exports = function(orderNumber, orderUser, orderStatus) {
+  var exports = function(_number, user, status) {
     var _this = this;
 
-    _this['orderNumber'] = orderNumber;
-    _this['orderUser'] = orderUser;
-    _this['orderStatus'] = orderStatus;
+    _this['number'] = _number;
+    _this['user'] = user;
+    _this['status'] = status;
   };
 
   /**
@@ -64,31 +64,31 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('orderNumber')) {
-        obj['orderNumber'] = ApiClient.convertToType(data['orderNumber'], 'String');
+      if (data.hasOwnProperty('number')) {
+        obj['number'] = ApiClient.convertToType(data['number'], 'String');
       }
-      if (data.hasOwnProperty('orderUser')) {
-        obj['orderUser'] = ApiClient.convertToType(data['orderUser'], 'String');
+      if (data.hasOwnProperty('user')) {
+        obj['user'] = ApiClient.convertToType(data['user'], 'String');
       }
-      if (data.hasOwnProperty('orderStatus')) {
-        obj['orderStatus'] = OrderStatus.constructFromObject(data['orderStatus']);
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = OrderStatus.constructFromObject(data['status']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} orderNumber
+   * @member {String} number
    */
-  exports.prototype['orderNumber'] = undefined;
+  exports.prototype['number'] = undefined;
   /**
-   * @member {String} orderUser
+   * @member {String} user
    */
-  exports.prototype['orderUser'] = undefined;
+  exports.prototype['user'] = undefined;
   /**
-   * @member {module:model/OrderStatus} orderStatus
+   * @member {module:model/OrderStatus} status
    */
-  exports.prototype['orderStatus'] = undefined;
+  exports.prototype['status'] = undefined;
 
 
 
