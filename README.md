@@ -117,19 +117,28 @@ Class | Method | HTTP request | Description
 *Bottega.OrdersApi* | [**orderOrderNumberPayPost**](docs/OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 *Bottega.OrdersApi* | [**orderPost**](docs/OrdersApi.md#orderPost) | **POST** /order | 
 *Bottega.OrdersApi* | [**orderProcessOrderGet**](docs/OrdersApi.md#orderProcessOrderGet) | **GET** /order/processOrder | 
+*Bottega.PackagesApi* | [**packageGet**](docs/PackagesApi.md#packageGet) | **GET** /package | Get all packages
 
 
 ## Documentation for Models
 
+ - [Bottega.ActiveDays](docs/ActiveDays.md)
  - [Bottega.BuyingOption](docs/BuyingOption.md)
+ - [Bottega.Campaign](docs/Campaign.md)
+ - [Bottega.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Bottega.InlineResponse400](docs/InlineResponse400.md)
  - [Bottega.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
  - [Bottega.InlineResponse415](docs/InlineResponse415.md)
  - [Bottega.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
+ - [Bottega.ModelPackage](docs/ModelPackage.md)
  - [Bottega.Order](docs/Order.md)
  - [Bottega.OrderStatus](docs/OrderStatus.md)
+ - [Bottega.PackageDescription](docs/PackageDescription.md)
+ - [Bottega.PackageOffer](docs/PackageOffer.md)
+ - [Bottega.Paper](docs/Paper.md)
  - [Bottega.PaymentOption](docs/PaymentOption.md)
  - [Bottega.PaymentTerminalUrl](docs/PaymentTerminalUrl.md)
+ - [Bottega.Product](docs/Product.md)
 
 
 ## Documentation for Authorization

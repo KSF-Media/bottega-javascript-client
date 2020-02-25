@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BuyingOption', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/Order', 'model/OrderStatus', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'api/OrdersApi'], factory);
+    define(['ApiClient', 'model/ActiveDays', 'model/BuyingOption', 'model/Campaign', 'model/DescriptionFrequency', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/ModelPackage', 'model/Order', 'model/OrderStatus', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product', 'api/OrdersApi', 'api/PackagesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BuyingOption'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/Order'), require('./model/OrderStatus'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./api/OrdersApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/BuyingOption'), require('./model/Campaign'), require('./model/DescriptionFrequency'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderStatus'), require('./model/PackageDescription'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/OrdersApi'), require('./api/PackagesApi'));
   }
-}(function(ApiClient, BuyingOption, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, Order, OrderStatus, PaymentOption, PaymentTerminalUrl, OrdersApi) {
+}(function(ApiClient, ActiveDays, BuyingOption, Campaign, DescriptionFrequency, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, ModelPackage, Order, OrderStatus, PackageDescription, PackageOffer, Paper, PaymentOption, PaymentTerminalUrl, Product, OrdersApi, PackagesApi) {
   'use strict';
 
   /**
@@ -62,10 +62,25 @@
      */
     ApiClient: ApiClient,
     /**
+     * The ActiveDays model constructor.
+     * @property {module:model/ActiveDays}
+     */
+    ActiveDays: ActiveDays,
+    /**
      * The BuyingOption model constructor.
      * @property {module:model/BuyingOption}
      */
     BuyingOption: BuyingOption,
+    /**
+     * The Campaign model constructor.
+     * @property {module:model/Campaign}
+     */
+    Campaign: Campaign,
+    /**
+     * The DescriptionFrequency model constructor.
+     * @property {module:model/DescriptionFrequency}
+     */
+    DescriptionFrequency: DescriptionFrequency,
     /**
      * The InlineResponse400 model constructor.
      * @property {module:model/InlineResponse400}
@@ -87,6 +102,11 @@
      */
     InlineResponse415UnsupportedMediaType: InlineResponse415UnsupportedMediaType,
     /**
+     * The ModelPackage model constructor.
+     * @property {module:model/ModelPackage}
+     */
+    ModelPackage: ModelPackage,
+    /**
      * The Order model constructor.
      * @property {module:model/Order}
      */
@@ -96,6 +116,21 @@
      * @property {module:model/OrderStatus}
      */
     OrderStatus: OrderStatus,
+    /**
+     * The PackageDescription model constructor.
+     * @property {module:model/PackageDescription}
+     */
+    PackageDescription: PackageDescription,
+    /**
+     * The PackageOffer model constructor.
+     * @property {module:model/PackageOffer}
+     */
+    PackageOffer: PackageOffer,
+    /**
+     * The Paper model constructor.
+     * @property {module:model/Paper}
+     */
+    Paper: Paper,
     /**
      * The PaymentOption model constructor.
      * @property {module:model/PaymentOption}
@@ -107,10 +142,20 @@
      */
     PaymentTerminalUrl: PaymentTerminalUrl,
     /**
+     * The Product model constructor.
+     * @property {module:model/Product}
+     */
+    Product: Product,
+    /**
      * The OrdersApi service constructor.
      * @property {module:api/OrdersApi}
      */
-    OrdersApi: OrdersApi
+    OrdersApi: OrdersApi,
+    /**
+     * The PackagesApi service constructor.
+     * @property {module:api/PackagesApi}
+     */
+    PackagesApi: PackagesApi
   };
 
   return exports;
