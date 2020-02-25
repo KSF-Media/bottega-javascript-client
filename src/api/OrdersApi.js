@@ -212,7 +212,6 @@
     /**
      * Handles Nets payment response
      * @param {Object} opts Optional parameters
-     * @param {String} opts.processAuthToken 
      * @param {String} opts.transactionId 
      * @param {String} opts.responseCode 
      * @param {module:api/OrdersApi~orderProcessOrderGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -225,7 +224,6 @@
       var pathParams = {
       };
       var queryParams = {
-        'processAuthToken': opts['processAuthToken'],
         'transactionId': opts['transactionId'],
         'responseCode': opts['responseCode'],
       };

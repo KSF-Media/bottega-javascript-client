@@ -187,7 +187,6 @@ var Bottega = require('bottega');
 
 var apiInstance = new Bottega.OrdersApi();
 var opts = {
-  'processAuthToken': "processAuthToken_example", // String | 
   'transactionId': "transactionId_example", // String | 
   'responseCode': "responseCode_example" // String | 
 };
@@ -207,7 +206,6 @@ apiInstance.orderProcessOrderGet(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **processAuthToken** | **String**|  | [optional] 
  **transactionId** | **String**|  | [optional] 
  **responseCode** | **String**|  | [optional] 
 
