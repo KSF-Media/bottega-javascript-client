@@ -174,7 +174,7 @@ No authorization required
 
 ## orderProcessOrderGet
 
-> String orderProcessOrderGet(opts)
+> [Object] orderProcessOrderGet(opts)
 
 
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+**[Object]**
 
 ### Authorization
 
@@ -220,5 +220,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 
