@@ -79,7 +79,7 @@ var Bottega = require('bottega');
 
 var apiInstance = new Bottega.OrdersApi();
 var orderNumber = "orderNumber_example"; // String | 
-var body = "body_example"; // String | 
+var body = new Bottega.PaymentOption(); // PaymentOption | 
 var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
@@ -101,7 +101,7 @@ apiInstance.orderOrderNumberPayPost(orderNumber, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderNumber** | **String**|  | 
- **body** | **String**|  | 
+ **body** | [**PaymentOption**](PaymentOption.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 

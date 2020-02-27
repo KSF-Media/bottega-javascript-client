@@ -30,6 +30,7 @@
   var instance;
 
   beforeEach(function() {
+    instance = new Bottega.PaymentOption();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,6 +54,12 @@
       // uncomment below and update the code to test PaymentOption
       //var instance = new Bottega.PaymentOption();
       //expect(instance).to.be.a(Bottega.PaymentOption);
+    });
+
+    it('should have the property paymentOption (base name: "paymentOption")', function() {
+      // uncomment below and update the code to test the property paymentOption
+      //var instance = new Bottega.PaymentOption();
+      //expect(instance).to.be();
     });
 
   });

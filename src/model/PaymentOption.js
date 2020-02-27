@@ -31,36 +31,48 @@
   'use strict';
 
 
-  /**
-   * Enum class PaymentOption.
-   * @enum {}
-   * @readonly
-   */
-  var exports = {
-    /**
-     * value: "Bill"
-     * @const
-     */
-    "Bill": "Bill",
-    /**
-     * value: "CreditCard"
-     * @const
-     */
-    "CreditCard": "CreditCard",
-    /**
-     * value: "BankPayment"
-     * @const
-     */
-    "BankPayment": "BankPayment"  };
 
   /**
-   * Returns a <code>PaymentOption</code> enum value from a Javascript object name.
-   * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/PaymentOption} The enum <code>PaymentOption</code> value.
+   * The PaymentOption model module.
+   * @module model/PaymentOption
+   * @version 1.0.0
    */
-  exports.constructFromObject = function(object) {
-    return object;
+
+  /**
+   * Constructs a new <code>PaymentOption</code>.
+   * @alias module:model/PaymentOption
+   * @class
+   * @param paymentOption {String} 
+   */
+  var exports = function(paymentOption) {
+    var _this = this;
+
+    _this['paymentOption'] = paymentOption;
+  };
+
+  /**
+   * Constructs a <code>PaymentOption</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/PaymentOption} obj Optional instance to populate.
+   * @return {module:model/PaymentOption} The populated <code>PaymentOption</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) {
+      obj = obj || new exports();
+      if (data.hasOwnProperty('paymentOption')) {
+        obj['paymentOption'] = ApiClient.convertToType(data['paymentOption'], 'String');
+      }
+    }
+    return obj;
   }
+
+  /**
+   * @member {String} paymentOption
+   */
+  exports.prototype['paymentOption'] = undefined;
+
+
 
   return exports;
 }));

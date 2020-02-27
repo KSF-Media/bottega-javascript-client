@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BuyingOption', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/PaymentTerminalUrl'], factory);
+    define(['ApiClient', 'model/BuyingOption', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/PaymentOption', 'model/PaymentTerminalUrl'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BuyingOption'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/PaymentTerminalUrl'));
+    module.exports = factory(require('../ApiClient'), require('../model/BuyingOption'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/PaymentOption'), require('../model/PaymentTerminalUrl'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.BuyingOption, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.PaymentTerminalUrl);
+    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.BuyingOption, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.PaymentOption, root.Bottega.PaymentTerminalUrl);
   }
-}(this, function(ApiClient, BuyingOption, InlineResponse400, InlineResponse415, Order, PaymentTerminalUrl) {
+}(this, function(ApiClient, BuyingOption, InlineResponse400, InlineResponse415, Order, PaymentOption, PaymentTerminalUrl) {
   'use strict';
 
   /**
@@ -108,7 +108,7 @@
     /**
      * Pay for an Order, marking it as ready for processing
      * @param {String} orderNumber 
-     * @param {String} body 
+     * @param {module:model/PaymentOption} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 

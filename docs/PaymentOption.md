@@ -1,12 +1,9 @@
 # Bottega.PaymentOption
 
-## Enum
+## Properties
 
-
-* `Bill` (value: `"Bill"`)
-
-* `CreditCard` (value: `"CreditCard"`)
-
-* `BankPayment` (value: `"BankPayment"`)
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**paymentOption** | **String** |  | 
 
 
