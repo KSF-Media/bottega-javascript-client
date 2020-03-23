@@ -205,7 +205,7 @@
      * Callback function to receive the result of the orderProcessOrderGet operation.
      * @callback module:api/OrdersApi~orderProcessOrderGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -215,7 +215,7 @@
      * @param {String} opts.transactionId 
      * @param {String} opts.responseCode 
      * @param {module:api/OrdersApi~orderProcessOrderGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link String}
      */
     this.orderProcessOrderGet = function(opts, callback) {
       opts = opts || {};
@@ -236,8 +236,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = [Object];
+      var accepts = ['text/html;charset=utf-8'];
+      var returnType = 'String';
       return this.apiClient.callApi(
         '/order/processOrder', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
