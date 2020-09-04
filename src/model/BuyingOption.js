@@ -73,6 +73,9 @@
       if (data.hasOwnProperty('payAmountCents')) {
         obj['payAmountCents'] = ApiClient.convertToType(data['payAmountCents'], 'Number');
       }
+      if (data.hasOwnProperty('campaignNo')) {
+        obj['campaignNo'] = ApiClient.convertToType(data['campaignNo'], 'Number');
+      }
     }
     return obj;
   }
@@ -89,6 +92,10 @@
    * @member {Number} payAmountCents
    */
   exports.prototype['payAmountCents'] = undefined;
+  /**
+   * @member {Number} campaignNo
+   */
+  exports.prototype['campaignNo'] = undefined;
 
 
 

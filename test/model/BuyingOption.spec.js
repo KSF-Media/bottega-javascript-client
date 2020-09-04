@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property campaignNo (base name: "campaignNo")', function() {
+      // uncomment below and update the code to test the property campaignNo
+      //var instance = new Bottega.BuyingOption();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
