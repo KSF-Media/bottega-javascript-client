@@ -123,7 +123,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Bottega.ActiveDays](docs/ActiveDays.md)
- - [Bottega.BuyingOption](docs/BuyingOption.md)
  - [Bottega.Campaign](docs/Campaign.md)
  - [Bottega.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Bottega.InlineResponse400](docs/InlineResponse400.md)

@@ -45,13 +45,19 @@
    * @param no {Number} 
    * @param id {String} 
    * @param name {String} 
+   * @param priceEur {Number} 
+   * @param length {Number} 
+   * @param lengthUnit {String} 
    */
-  var exports = function(no, id, name) {
+  var exports = function(no, id, name, priceEur, length, lengthUnit) {
     var _this = this;
 
     _this['no'] = no;
     _this['id'] = id;
     _this['name'] = name;
+    _this['priceEur'] = priceEur;
+    _this['length'] = length;
+    _this['lengthUnit'] = lengthUnit;
   };
 
   /**
@@ -73,6 +79,15 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
+      if (data.hasOwnProperty('priceEur')) {
+        obj['priceEur'] = ApiClient.convertToType(data['priceEur'], 'Number');
+      }
+      if (data.hasOwnProperty('length')) {
+        obj['length'] = ApiClient.convertToType(data['length'], 'Number');
+      }
+      if (data.hasOwnProperty('lengthUnit')) {
+        obj['lengthUnit'] = ApiClient.convertToType(data['lengthUnit'], 'String');
+      }
     }
     return obj;
   }
@@ -89,6 +104,18 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * @member {Number} priceEur
+   */
+  exports.prototype['priceEur'] = undefined;
+  /**
+   * @member {Number} length
+   */
+  exports.prototype['length'] = undefined;
+  /**
+   * @member {String} lengthUnit
+   */
+  exports.prototype['lengthUnit'] = undefined;
 
 
 

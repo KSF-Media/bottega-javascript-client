@@ -74,6 +74,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property priceEur (base name: "priceEur")', function() {
+      // uncomment below and update the code to test the property priceEur
+      //var instance = new Bottega.Campaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property length (base name: "length")', function() {
+      // uncomment below and update the code to test the property length
+      //var instance = new Bottega.Campaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property lengthUnit (base name: "lengthUnit")', function() {
+      // uncomment below and update the code to test the property lengthUnit
+      //var instance = new Bottega.Campaign();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
