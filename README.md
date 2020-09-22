@@ -118,12 +118,22 @@ Class | Method | HTTP request | Description
 *Bottega.OrdersApi* | [**orderPost**](docs/OrdersApi.md#orderPost) | **POST** /order | 
 *Bottega.OrdersApi* | [**orderProcessOrderGet**](docs/OrdersApi.md#orderProcessOrderGet) | **GET** /order/processOrder | 
 *Bottega.PackagesApi* | [**packageGet**](docs/PackagesApi.md#packageGet) | **GET** /package | Get all packages
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdDelete**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdDelete) | **DELETE** /paymentMethod/creditCard/{id} | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdGet) | **GET** /paymentMethod/creditCard/{id} | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdRegisterNumberGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterNumberGet) | **GET** /paymentMethod/creditCard/{id}/register/{number} | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdRegisterPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterPost) | **POST** /paymentMethod/creditCard/{id}/register | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdSubscriptionPut**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdSubscriptionPut) | **PUT** /paymentMethod/creditCard/{id}/subscription | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardPost) | **POST** /paymentMethod/creditCard | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardRegisterProcessGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardRegisterProcessGet) | **GET** /paymentMethod/creditCard/register/process | 
 
 
 ## Documentation for Models
 
  - [Bottega.ActiveDays](docs/ActiveDays.md)
  - [Bottega.Campaign](docs/Campaign.md)
+ - [Bottega.CreditCard](docs/CreditCard.md)
+ - [Bottega.CreditCardRegister](docs/CreditCardRegister.md)
+ - [Bottega.CreditCardRegisterStatus](docs/CreditCardRegisterStatus.md)
  - [Bottega.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Bottega.InlineResponse400](docs/InlineResponse400.md)
  - [Bottega.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)

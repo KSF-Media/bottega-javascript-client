@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ActiveDays', 'model/Campaign', 'model/DescriptionFrequency', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/ModelPackage', 'model/Order', 'model/OrderStatus', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product', 'api/OrdersApi', 'api/PackagesApi'], factory);
+    define(['ApiClient', 'model/ActiveDays', 'model/Campaign', 'model/CreditCard', 'model/CreditCardRegister', 'model/CreditCardRegisterStatus', 'model/DescriptionFrequency', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/ModelPackage', 'model/Order', 'model/OrderStatus', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product', 'api/OrdersApi', 'api/PackagesApi', 'api/PaymentMethodsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/Campaign'), require('./model/DescriptionFrequency'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderStatus'), require('./model/PackageDescription'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/OrdersApi'), require('./api/PackagesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/Campaign'), require('./model/CreditCard'), require('./model/CreditCardRegister'), require('./model/CreditCardRegisterStatus'), require('./model/DescriptionFrequency'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderStatus'), require('./model/PackageDescription'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/OrdersApi'), require('./api/PackagesApi'), require('./api/PaymentMethodsApi'));
   }
-}(function(ApiClient, ActiveDays, Campaign, DescriptionFrequency, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, ModelPackage, Order, OrderStatus, PackageDescription, PackageOffer, Paper, PaymentOption, PaymentTerminalUrl, Product, OrdersApi, PackagesApi) {
+}(function(ApiClient, ActiveDays, Campaign, CreditCard, CreditCardRegister, CreditCardRegisterStatus, DescriptionFrequency, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, ModelPackage, Order, OrderStatus, PackageDescription, PackageOffer, Paper, PaymentOption, PaymentTerminalUrl, Product, OrdersApi, PackagesApi, PaymentMethodsApi) {
   'use strict';
 
   /**
@@ -71,6 +71,21 @@
      * @property {module:model/Campaign}
      */
     Campaign: Campaign,
+    /**
+     * The CreditCard model constructor.
+     * @property {module:model/CreditCard}
+     */
+    CreditCard: CreditCard,
+    /**
+     * The CreditCardRegister model constructor.
+     * @property {module:model/CreditCardRegister}
+     */
+    CreditCardRegister: CreditCardRegister,
+    /**
+     * The CreditCardRegisterStatus model constructor.
+     * @property {module:model/CreditCardRegisterStatus}
+     */
+    CreditCardRegisterStatus: CreditCardRegisterStatus,
     /**
      * The DescriptionFrequency model constructor.
      * @property {module:model/DescriptionFrequency}
@@ -150,7 +165,12 @@
      * The PackagesApi service constructor.
      * @property {module:api/PackagesApi}
      */
-    PackagesApi: PackagesApi
+    PackagesApi: PackagesApi,
+    /**
+     * The PaymentMethodsApi service constructor.
+     * @property {module:api/PaymentMethodsApi}
+     */
+    PaymentMethodsApi: PaymentMethodsApi
   };
 
   return exports;
