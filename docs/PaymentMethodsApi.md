@@ -4,6 +4,7 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**paymentMethodCreditCardGet**](PaymentMethodsApi.md#paymentMethodCreditCardGet) | **GET** /paymentMethod/creditCard | 
 [**paymentMethodCreditCardIdDelete**](PaymentMethodsApi.md#paymentMethodCreditCardIdDelete) | **DELETE** /paymentMethod/creditCard/{id} | 
 [**paymentMethodCreditCardIdGet**](PaymentMethodsApi.md#paymentMethodCreditCardIdGet) | **GET** /paymentMethod/creditCard/{id} | 
 [**paymentMethodCreditCardIdRegisterNumberGet**](PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterNumberGet) | **GET** /paymentMethod/creditCard/{id}/register/{number} | 
@@ -12,6 +13,57 @@ Method | HTTP request | Description
 [**paymentMethodCreditCardPost**](PaymentMethodsApi.md#paymentMethodCreditCardPost) | **POST** /paymentMethod/creditCard | 
 [**paymentMethodCreditCardRegisterProcessGet**](PaymentMethodsApi.md#paymentMethodCreditCardRegisterProcessGet) | **GET** /paymentMethod/creditCard/register/process | 
 
+
+
+## paymentMethodCreditCardGet
+
+> [CreditCard] paymentMethodCreditCardGet(opts)
+
+
+
+Get credit cards of user
+
+### Example
+
+```javascript
+var Bottega = require('bottega');
+
+var apiInstance = new Bottega.PaymentMethodsApi();
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.paymentMethodCreditCardGet(opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**[CreditCard]**](CreditCard.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 
 
 ## paymentMethodCreditCardIdDelete

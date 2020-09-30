@@ -118,6 +118,7 @@ Class | Method | HTTP request | Description
 *Bottega.OrdersApi* | [**orderPost**](docs/OrdersApi.md#orderPost) | **POST** /order | 
 *Bottega.OrdersApi* | [**orderProcessOrderGet**](docs/OrdersApi.md#orderProcessOrderGet) | **GET** /order/processOrder | 
 *Bottega.PackagesApi* | [**packageGet**](docs/PackagesApi.md#packageGet) | **GET** /package | Get all packages
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardGet) | **GET** /paymentMethod/creditCard | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdDelete**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdDelete) | **DELETE** /paymentMethod/creditCard/{id} | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdGet) | **GET** /paymentMethod/creditCard/{id} | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdRegisterNumberGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterNumberGet) | **GET** /paymentMethod/creditCard/{id}/register/{number} | 

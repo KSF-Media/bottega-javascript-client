@@ -50,6 +50,16 @@
   }
 
   describe('PaymentMethodsApi', function() {
+    describe('paymentMethodCreditCardGet', function() {
+      it('should call paymentMethodCreditCardGet successfully', function(done) {
+        //uncomment below and update the code to test paymentMethodCreditCardGet
+        //instance.paymentMethodCreditCardGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('paymentMethodCreditCardIdDelete', function() {
       it('should call paymentMethodCreditCardIdDelete successfully', function(done) {
         //uncomment below and update the code to test paymentMethodCreditCardIdDelete

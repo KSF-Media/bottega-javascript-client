@@ -48,6 +48,50 @@
 
 
     /**
+     * Callback function to receive the result of the paymentMethodCreditCardGet operation.
+     * @callback module:api/PaymentMethodsApi~paymentMethodCreditCardGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CreditCard>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get credit cards of user
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CreditCard>}
+     */
+    this.paymentMethodCreditCardGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [CreditCard];
+      return this.apiClient.callApi(
+        '/paymentMethod/creditCard', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the paymentMethodCreditCardIdDelete operation.
      * @callback module:api/PaymentMethodsApi~paymentMethodCreditCardIdDeleteCallback
      * @param {String} error Error message, if any.
