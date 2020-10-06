@@ -71,9 +71,6 @@
       if (data.hasOwnProperty('paymentMethodId')) {
         obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'Number');
       }
-      if (data.hasOwnProperty('panHash')) {
-        obj['panHash'] = ApiClient.convertToType(data['panHash'], 'String');
-      }
       if (data.hasOwnProperty('maskedPan')) {
         obj['maskedPan'] = ApiClient.convertToType(data['maskedPan'], 'String');
       }
@@ -96,10 +93,6 @@
    * @member {Number} paymentMethodId
    */
   exports.prototype['paymentMethodId'] = undefined;
-  /**
-   * @member {String} panHash
-   */
-  exports.prototype['panHash'] = undefined;
   /**
    * @member {String} maskedPan
    */

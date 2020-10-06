@@ -74,12 +74,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property panHash (base name: "panHash")', function() {
-      // uncomment below and update the code to test the property panHash
-      //var instance = new Bottega.CreditCard();
-      //expect(instance).to.be();
-    });
-
     it('should have the property maskedPan (base name: "maskedPan")', function() {
       // uncomment below and update the code to test the property maskedPan
       //var instance = new Bottega.CreditCard();
