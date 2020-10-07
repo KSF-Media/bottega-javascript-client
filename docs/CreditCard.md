@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
 **user** | **String** |  | 
-**paymentMethodId** | **Number** |  | [optional] 
-**maskedPan** | **String** |  | [optional] 
-**expiryDate** | **String** |  | [optional] 
+**paymentMethodId** | **Number** |  | 
+**maskedPan** | **String** |  | 
+**expiryDate** | **String** |  | 
 
 

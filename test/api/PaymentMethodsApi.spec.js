@@ -90,16 +90,6 @@
         done();
       });
     });
-    describe('paymentMethodCreditCardIdRegisterPost', function() {
-      it('should call paymentMethodCreditCardIdRegisterPost successfully', function(done) {
-        //uncomment below and update the code to test paymentMethodCreditCardIdRegisterPost
-        //instance.paymentMethodCreditCardIdRegisterPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('paymentMethodCreditCardIdSubscriptionPut', function() {
       it('should call paymentMethodCreditCardIdSubscriptionPut successfully', function(done) {
         //uncomment below and update the code to test paymentMethodCreditCardIdSubscriptionPut
@@ -110,10 +100,10 @@
         done();
       });
     });
-    describe('paymentMethodCreditCardPost', function() {
-      it('should call paymentMethodCreditCardPost successfully', function(done) {
-        //uncomment below and update the code to test paymentMethodCreditCardPost
-        //instance.paymentMethodCreditCardPost(function(error) {
+    describe('paymentMethodCreditCardRegisterPost', function() {
+      it('should call paymentMethodCreditCardRegisterPost successfully', function(done) {
+        //uncomment below and update the code to test paymentMethodCreditCardRegisterPost
+        //instance.paymentMethodCreditCardRegisterPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

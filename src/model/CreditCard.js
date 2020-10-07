@@ -44,12 +44,18 @@
    * @class
    * @param id {Number} 
    * @param user {String} 
+   * @param paymentMethodId {Number} 
+   * @param maskedPan {String} 
+   * @param expiryDate {String} 
    */
-  var exports = function(id, user) {
+  var exports = function(id, user, paymentMethodId, maskedPan, expiryDate) {
     var _this = this;
 
     _this['id'] = id;
     _this['user'] = user;
+    _this['paymentMethodId'] = paymentMethodId;
+    _this['maskedPan'] = maskedPan;
+    _this['expiryDate'] = expiryDate;
   };
 
   /**

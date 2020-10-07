@@ -122,9 +122,8 @@ Class | Method | HTTP request | Description
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdDelete**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdDelete) | **DELETE** /paymentMethod/creditCard/{id} | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdGet) | **GET** /paymentMethod/creditCard/{id} | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdRegisterNumberGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterNumberGet) | **GET** /paymentMethod/creditCard/{id}/register/{number} | 
-*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdRegisterPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterPost) | **POST** /paymentMethod/creditCard/{id}/register | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdSubscriptionPut**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdSubscriptionPut) | **PUT** /paymentMethod/creditCard/{id}/subscription | 
-*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardPost) | **POST** /paymentMethod/creditCard | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardRegisterPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardRegisterPost) | **POST** /paymentMethod/creditCard/register | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardRegisterProcessGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardRegisterProcessGet) | **GET** /paymentMethod/creditCard/register/process | 
 
 

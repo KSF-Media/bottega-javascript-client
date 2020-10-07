@@ -248,56 +248,6 @@
     }
 
     /**
-     * Callback function to receive the result of the paymentMethodCreditCardIdRegisterPost operation.
-     * @callback module:api/PaymentMethodsApi~paymentMethodCreditCardIdRegisterPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CreditCardRegister} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Register a credit card with payment provider
-     * @param {Number} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authUser 
-     * @param {String} opts.authorization 
-     * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardIdRegisterPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CreditCardRegister}
-     */
-    this.paymentMethodCreditCardIdRegisterPost = function(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling paymentMethodCreditCardIdRegisterPost");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'AuthUser': opts['authUser'],
-        'Authorization': opts['authorization']
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = CreditCardRegister;
-      return this.apiClient.callApi(
-        '/paymentMethod/creditCard/{id}/register', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the paymentMethodCreditCardIdSubscriptionPut operation.
      * @callback module:api/PaymentMethodsApi~paymentMethodCreditCardIdSubscriptionPutCallback
      * @param {String} error Error message, if any.
@@ -353,22 +303,22 @@
     }
 
     /**
-     * Callback function to receive the result of the paymentMethodCreditCardPost operation.
-     * @callback module:api/PaymentMethodsApi~paymentMethodCreditCardPostCallback
+     * Callback function to receive the result of the paymentMethodCreditCardRegisterPost operation.
+     * @callback module:api/PaymentMethodsApi~paymentMethodCreditCardRegisterPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CreditCard} data The data returned by the service call.
+     * @param {module:model/CreditCardRegister} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Create a credit card
+     * Register a credit card with payment provider
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
-     * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CreditCard}
+     * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardRegisterPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CreditCardRegister}
      */
-    this.paymentMethodCreditCardPost = function(opts, callback) {
+    this.paymentMethodCreditCardRegisterPost = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -388,9 +338,9 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = CreditCard;
+      var returnType = CreditCardRegister;
       return this.apiClient.callApi(
-        '/paymentMethod/creditCard', 'POST',
+        '/paymentMethod/creditCard/register', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

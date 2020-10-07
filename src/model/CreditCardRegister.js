@@ -45,13 +45,15 @@
    * @param _number {String} 
    * @param user {String} 
    * @param status {module:model/CreditCardRegisterStatus} 
+   * @param creditCardId {Number} 
    */
-  var exports = function(_number, user, status) {
+  var exports = function(_number, user, status, creditCardId) {
     var _this = this;
 
     _this['number'] = _number;
     _this['user'] = user;
     _this['status'] = status;
+    _this['creditCardId'] = creditCardId;
   };
 
   /**
@@ -76,6 +78,9 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = CreditCardRegisterStatus.constructFromObject(data['status']);
       }
+      if (data.hasOwnProperty('creditCardId')) {
+        obj['creditCardId'] = ApiClient.convertToType(data['creditCardId'], 'Number');
+      }
     }
     return obj;
   }
@@ -96,6 +101,10 @@
    * @member {module:model/CreditCardRegisterStatus} status
    */
   exports.prototype['status'] = undefined;
+  /**
+   * @member {Number} creditCardId
+   */
+  exports.prototype['creditCardId'] = undefined;
 
 
 

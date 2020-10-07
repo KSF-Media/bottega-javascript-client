@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property creditCardId (base name: "creditCardId")', function() {
+      // uncomment below and update the code to test the property creditCardId
+      //var instance = new Bottega.CreditCardRegister();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

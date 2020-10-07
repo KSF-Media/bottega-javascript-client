@@ -8,9 +8,8 @@ Method | HTTP request | Description
 [**paymentMethodCreditCardIdDelete**](PaymentMethodsApi.md#paymentMethodCreditCardIdDelete) | **DELETE** /paymentMethod/creditCard/{id} | 
 [**paymentMethodCreditCardIdGet**](PaymentMethodsApi.md#paymentMethodCreditCardIdGet) | **GET** /paymentMethod/creditCard/{id} | 
 [**paymentMethodCreditCardIdRegisterNumberGet**](PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterNumberGet) | **GET** /paymentMethod/creditCard/{id}/register/{number} | 
-[**paymentMethodCreditCardIdRegisterPost**](PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterPost) | **POST** /paymentMethod/creditCard/{id}/register | 
 [**paymentMethodCreditCardIdSubscriptionPut**](PaymentMethodsApi.md#paymentMethodCreditCardIdSubscriptionPut) | **PUT** /paymentMethod/creditCard/{id}/subscription | 
-[**paymentMethodCreditCardPost**](PaymentMethodsApi.md#paymentMethodCreditCardPost) | **POST** /paymentMethod/creditCard | 
+[**paymentMethodCreditCardRegisterPost**](PaymentMethodsApi.md#paymentMethodCreditCardRegisterPost) | **POST** /paymentMethod/creditCard/register | 
 [**paymentMethodCreditCardRegisterProcessGet**](PaymentMethodsApi.md#paymentMethodCreditCardRegisterProcessGet) | **GET** /paymentMethod/creditCard/register/process | 
 
 
@@ -227,59 +226,6 @@ No authorization required
 - **Accept**: application/json;charset=utf-8
 
 
-## paymentMethodCreditCardIdRegisterPost
-
-> CreditCardRegister paymentMethodCreditCardIdRegisterPost(id, opts)
-
-
-
-Register a credit card with payment provider
-
-### Example
-
-```javascript
-var Bottega = require('bottega');
-
-var apiInstance = new Bottega.PaymentMethodsApi();
-var id = 56; // Number | 
-var opts = {
-  'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
-};
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.paymentMethodCreditCardIdRegisterPost(id, opts, callback);
-```
-
-### Parameters
-
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
- **authUser** | [**String**](.md)|  | [optional] 
- **authorization** | **String**|  | [optional] 
-
-### Return type
-
-[**CreditCardRegister**](CreditCardRegister.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json;charset=utf-8
-
-
 ## paymentMethodCreditCardIdSubscriptionPut
 
 > [Object] paymentMethodCreditCardIdSubscriptionPut(id, body, opts)
@@ -335,13 +281,13 @@ No authorization required
 - **Accept**: application/json;charset=utf-8
 
 
-## paymentMethodCreditCardPost
+## paymentMethodCreditCardRegisterPost
 
-> CreditCard paymentMethodCreditCardPost(opts)
+> CreditCardRegister paymentMethodCreditCardRegisterPost(opts)
 
 
 
-Create a credit card
+Register a credit card with payment provider
 
 ### Example
 
@@ -360,7 +306,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.paymentMethodCreditCardPost(opts, callback);
+apiInstance.paymentMethodCreditCardRegisterPost(opts, callback);
 ```
 
 ### Parameters
@@ -374,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditCard**](CreditCard.md)
+[**CreditCardRegister**](CreditCardRegister.md)
 
 ### Authorization
 

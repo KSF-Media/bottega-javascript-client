@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **user** | **String** |  | 
 **paymentTerminalUrl** | [**PaymentTerminalUrl**](PaymentTerminalUrl.md) |  | [optional] 
 **status** | [**CreditCardRegisterStatus**](CreditCardRegisterStatus.md) |  | 
+**creditCardId** | **Number** |  | 
 
 
