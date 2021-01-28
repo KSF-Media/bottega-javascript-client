@@ -133,7 +133,7 @@ Create a new Order
 var Bottega = require('bottega');
 
 var apiInstance = new Bottega.OrdersApi();
-var body = new Bottega.Product(); // Product | 
+var body = new Bottega.OrderProduct(); // OrderProduct | 
 var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
@@ -154,7 +154,7 @@ apiInstance.orderPost(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Product**](Product.md)|  | 
+ **body** | [**OrderProduct**](OrderProduct.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 

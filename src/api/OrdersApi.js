@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product'], factory);
+    define(['ApiClient', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/OrderProduct', 'model/PaymentOption', 'model/PaymentTerminalUrl'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/PaymentOption'), require('../model/PaymentTerminalUrl'), require('../model/Product'));
+    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/OrderProduct'), require('../model/PaymentOption'), require('../model/PaymentTerminalUrl'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.PaymentOption, root.Bottega.PaymentTerminalUrl, root.Bottega.Product);
+    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.OrderProduct, root.Bottega.PaymentOption, root.Bottega.PaymentTerminalUrl);
   }
-}(this, function(ApiClient, InlineResponse400, InlineResponse415, Order, PaymentOption, PaymentTerminalUrl, Product) {
+}(this, function(ApiClient, InlineResponse400, InlineResponse415, Order, OrderProduct, PaymentOption, PaymentTerminalUrl) {
   'use strict';
 
   /**
@@ -162,7 +162,7 @@
 
     /**
      * Create a new Order
-     * @param {module:model/Product} body 
+     * @param {module:model/OrderProduct} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 

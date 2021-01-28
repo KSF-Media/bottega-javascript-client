@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
  - [Bottega.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
  - [Bottega.ModelPackage](docs/ModelPackage.md)
  - [Bottega.Order](docs/Order.md)
+ - [Bottega.OrderProduct](docs/OrderProduct.md)
  - [Bottega.OrderStatus](docs/OrderStatus.md)
  - [Bottega.PackageDescription](docs/PackageDescription.md)
  - [Bottega.PackageOffer](docs/PackageOffer.md)
