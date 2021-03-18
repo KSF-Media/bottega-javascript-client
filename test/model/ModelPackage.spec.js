@@ -104,6 +104,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property canPause (base name: "canPause")', function() {
+      // uncomment below and update the code to test the property canPause
+      //var instance = new Bottega.ModelPackage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property canTempAddr (base name: "canTempAddr")', function() {
+      // uncomment below and update the code to test the property canTempAddr
+      //var instance = new Bottega.ModelPackage();
+      //expect(instance).to.be();
+    });
+
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
       //var instance = new Bottega.ModelPackage();

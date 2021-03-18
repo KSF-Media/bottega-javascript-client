@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ActiveDays', 'model/Campaign', 'model/CreditCard', 'model/CreditCardRegister', 'model/CreditCardRegisterStatus', 'model/DescriptionFrequency', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/ModelPackage', 'model/Order', 'model/OrderProduct', 'model/OrderStatus', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product', 'api/OrdersApi', 'api/PackagesApi', 'api/PaymentMethodsApi'], factory);
+    define(['ApiClient', 'model/ActiveDays', 'model/CreditCard', 'model/CreditCardRegister', 'model/CreditCardRegisterStatus', 'model/DescriptionFrequency', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/ModelPackage', 'model/Order', 'model/OrderProduct', 'model/OrderStatus', 'model/PackageCampaign', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product', 'api/OrdersApi', 'api/PackagesApi', 'api/PaymentMethodsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/Campaign'), require('./model/CreditCard'), require('./model/CreditCardRegister'), require('./model/CreditCardRegisterStatus'), require('./model/DescriptionFrequency'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderProduct'), require('./model/OrderStatus'), require('./model/PackageDescription'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/OrdersApi'), require('./api/PackagesApi'), require('./api/PaymentMethodsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/CreditCard'), require('./model/CreditCardRegister'), require('./model/CreditCardRegisterStatus'), require('./model/DescriptionFrequency'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderProduct'), require('./model/OrderStatus'), require('./model/PackageCampaign'), require('./model/PackageDescription'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/OrdersApi'), require('./api/PackagesApi'), require('./api/PaymentMethodsApi'));
   }
-}(function(ApiClient, ActiveDays, Campaign, CreditCard, CreditCardRegister, CreditCardRegisterStatus, DescriptionFrequency, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, ModelPackage, Order, OrderProduct, OrderStatus, PackageDescription, PackageOffer, Paper, PaymentOption, PaymentTerminalUrl, Product, OrdersApi, PackagesApi, PaymentMethodsApi) {
+}(function(ApiClient, ActiveDays, CreditCard, CreditCardRegister, CreditCardRegisterStatus, DescriptionFrequency, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, ModelPackage, Order, OrderProduct, OrderStatus, PackageCampaign, PackageDescription, PackageOffer, Paper, PaymentOption, PaymentTerminalUrl, Product, OrdersApi, PackagesApi, PaymentMethodsApi) {
   'use strict';
 
   /**
@@ -66,11 +66,6 @@
      * @property {module:model/ActiveDays}
      */
     ActiveDays: ActiveDays,
-    /**
-     * The Campaign model constructor.
-     * @property {module:model/Campaign}
-     */
-    Campaign: Campaign,
     /**
      * The CreditCard model constructor.
      * @property {module:model/CreditCard}
@@ -131,6 +126,11 @@
      * @property {module:model/OrderStatus}
      */
     OrderStatus: OrderStatus,
+    /**
+     * The PackageCampaign model constructor.
+     * @property {module:model/PackageCampaign}
+     */
+    PackageCampaign: PackageCampaign,
     /**
      * The PackageDescription model constructor.
      * @property {module:model/PackageDescription}

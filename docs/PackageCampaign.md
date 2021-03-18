@@ -1,4 +1,4 @@
-# Bottega.Campaign
+# Bottega.PackageCampaign
 
 ## Properties
 

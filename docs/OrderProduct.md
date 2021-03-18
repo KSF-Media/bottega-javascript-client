@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **packageId** | **String** |  | 
-**period** | **Number** |  | 
-**payAmountCents** | **Number** |  | 
+**period** | **Number** |  | [optional] 
+**payAmountCents** | **Number** |  | [optional] 
 **campaignNo** | **Number** |  | [optional] 
 
 

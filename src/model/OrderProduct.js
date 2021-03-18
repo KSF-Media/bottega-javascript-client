@@ -43,15 +43,11 @@
    * @alias module:model/OrderProduct
    * @class
    * @param packageId {String} 
-   * @param period {Number} 
-   * @param payAmountCents {Number} 
    */
-  var exports = function(packageId, period, payAmountCents) {
+  var exports = function(packageId) {
     var _this = this;
 
     _this['packageId'] = packageId;
-    _this['period'] = period;
-    _this['payAmountCents'] = payAmountCents;
   };
 
   /**

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Campaign', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/Product'], factory);
+    define(['ApiClient', 'model/PackageCampaign', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/Product'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./PackageDescription'), require('./PackageOffer'), require('./Paper'), require('./Product'));
+    module.exports = factory(require('../ApiClient'), require('./PackageCampaign'), require('./PackageDescription'), require('./PackageOffer'), require('./Paper'), require('./Product'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.ModelPackage = factory(root.Bottega.ApiClient, root.Bottega.Campaign, root.Bottega.PackageDescription, root.Bottega.PackageOffer, root.Bottega.Paper, root.Bottega.Product);
+    root.Bottega.ModelPackage = factory(root.Bottega.ApiClient, root.Bottega.PackageCampaign, root.Bottega.PackageDescription, root.Bottega.PackageOffer, root.Bottega.Paper, root.Bottega.Product);
   }
-}(this, function(ApiClient, Campaign, PackageDescription, PackageOffer, Paper, Product) {
+}(this, function(ApiClient, PackageCampaign, PackageDescription, PackageOffer, Paper, Product) {
   'use strict';
 
 
@@ -48,9 +48,11 @@
    * @param digitalOnly {Boolean} 
    * @param products {Array.<module:model/Product>} 
    * @param offers {Array.<module:model/PackageOffer>} 
-   * @param campaigns {Array.<module:model/Campaign>} 
+   * @param campaigns {Array.<module:model/PackageCampaign>} 
+   * @param canPause {Boolean} 
+   * @param canTempAddr {Boolean} 
    */
-  var exports = function(id, name, paper, digitalOnly, products, offers, campaigns) {
+  var exports = function(id, name, paper, digitalOnly, products, offers, campaigns, canPause, canTempAddr) {
     var _this = this;
 
     _this['id'] = id;
@@ -60,6 +62,8 @@
     _this['products'] = products;
     _this['offers'] = offers;
     _this['campaigns'] = campaigns;
+    _this['canPause'] = canPause;
+    _this['canTempAddr'] = canTempAddr;
   };
 
   /**
@@ -91,10 +95,16 @@
         obj['offers'] = ApiClient.convertToType(data['offers'], [PackageOffer]);
       }
       if (data.hasOwnProperty('campaigns')) {
-        obj['campaigns'] = ApiClient.convertToType(data['campaigns'], [Campaign]);
+        obj['campaigns'] = ApiClient.convertToType(data['campaigns'], [PackageCampaign]);
       }
       if (data.hasOwnProperty('nextDelivery')) {
         obj['nextDelivery'] = ApiClient.convertToType(data['nextDelivery'], 'Date');
+      }
+      if (data.hasOwnProperty('canPause')) {
+        obj['canPause'] = ApiClient.convertToType(data['canPause'], 'Boolean');
+      }
+      if (data.hasOwnProperty('canTempAddr')) {
+        obj['canTempAddr'] = ApiClient.convertToType(data['canTempAddr'], 'Boolean');
       }
       if (data.hasOwnProperty('description')) {
         obj['description'] = PackageDescription.constructFromObject(data['description']);
@@ -128,13 +138,21 @@
    */
   exports.prototype['offers'] = undefined;
   /**
-   * @member {Array.<module:model/Campaign>} campaigns
+   * @member {Array.<module:model/PackageCampaign>} campaigns
    */
   exports.prototype['campaigns'] = undefined;
   /**
    * @member {Date} nextDelivery
    */
   exports.prototype['nextDelivery'] = undefined;
+  /**
+   * @member {Boolean} canPause
+   */
+  exports.prototype['canPause'] = undefined;
+  /**
+   * @member {Boolean} canTempAddr
+   */
+  exports.prototype['canTempAddr'] = undefined;
   /**
    * @member {module:model/PackageDescription} description
    */

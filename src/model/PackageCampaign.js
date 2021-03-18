@@ -25,7 +25,7 @@
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.Campaign = factory(root.Bottega.ApiClient);
+    root.Bottega.PackageCampaign = factory(root.Bottega.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -33,14 +33,14 @@
 
 
   /**
-   * The Campaign model module.
-   * @module model/Campaign
+   * The PackageCampaign model module.
+   * @module model/PackageCampaign
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>Campaign</code>.
-   * @alias module:model/Campaign
+   * Constructs a new <code>PackageCampaign</code>.
+   * @alias module:model/PackageCampaign
    * @class
    * @param no {Number} 
    * @param id {String} 
@@ -61,11 +61,11 @@
   };
 
   /**
-   * Constructs a <code>Campaign</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PackageCampaign</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Campaign} obj Optional instance to populate.
-   * @return {module:model/Campaign} The populated <code>Campaign</code> instance.
+   * @param {module:model/PackageCampaign} obj Optional instance to populate.
+   * @return {module:model/PackageCampaign} The populated <code>PackageCampaign</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

@@ -130,7 +130,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Bottega.ActiveDays](docs/ActiveDays.md)
- - [Bottega.Campaign](docs/Campaign.md)
  - [Bottega.CreditCard](docs/CreditCard.md)
  - [Bottega.CreditCardRegister](docs/CreditCardRegister.md)
  - [Bottega.CreditCardRegisterStatus](docs/CreditCardRegisterStatus.md)
@@ -143,6 +142,7 @@ Class | Method | HTTP request | Description
  - [Bottega.Order](docs/Order.md)
  - [Bottega.OrderProduct](docs/OrderProduct.md)
  - [Bottega.OrderStatus](docs/OrderStatus.md)
+ - [Bottega.PackageCampaign](docs/PackageCampaign.md)
  - [Bottega.PackageDescription](docs/PackageDescription.md)
  - [Bottega.PackageOffer](docs/PackageOffer.md)
  - [Bottega.Paper](docs/Paper.md)
