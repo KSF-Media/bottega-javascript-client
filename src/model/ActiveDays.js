@@ -42,13 +42,13 @@
    * Constructs a new <code>ActiveDays</code>.
    * @alias module:model/ActiveDays
    * @class
-   * @param mon {Boolean} 
-   * @param tue {Boolean} 
-   * @param wed {Boolean} 
-   * @param thu {Boolean} 
-   * @param fri {Boolean} 
-   * @param sat {Boolean} 
-   * @param sun {Boolean} 
+   * @param mon {Boolean} Active on Monday
+   * @param tue {Boolean} Active on Tuesday
+   * @param wed {Boolean} Active on Wednedsday
+   * @param thu {Boolean} Active on Thursday
+   * @param fri {Boolean} Active on Friday
+   * @param sat {Boolean} Active on Saturday
+   * @param sun {Boolean} Active on Sunday
    */
   var exports = function(mon, tue, wed, thu, fri, sat, sun) {
     var _this = this;
@@ -98,30 +98,37 @@
   }
 
   /**
+   * Active on Monday
    * @member {Boolean} mon
    */
   exports.prototype['mon'] = undefined;
   /**
+   * Active on Tuesday
    * @member {Boolean} tue
    */
   exports.prototype['tue'] = undefined;
   /**
+   * Active on Wednedsday
    * @member {Boolean} wed
    */
   exports.prototype['wed'] = undefined;
   /**
+   * Active on Thursday
    * @member {Boolean} thu
    */
   exports.prototype['thu'] = undefined;
   /**
+   * Active on Friday
    * @member {Boolean} fri
    */
   exports.prototype['fri'] = undefined;
   /**
+   * Active on Saturday
    * @member {Boolean} sat
    */
   exports.prototype['sat'] = undefined;
   /**
+   * Active on Sunday
    * @member {Boolean} sun
    */
   exports.prototype['sun'] = undefined;

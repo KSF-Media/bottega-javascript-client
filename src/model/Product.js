@@ -42,11 +42,11 @@
    * Constructs a new <code>Product</code>.
    * @alias module:model/Product
    * @class
-   * @param id {String} 
-   * @param name {String} 
+   * @param id {String} Identifying code of the product
+   * @param name {String} The name of the product
    * @param active {module:model/ActiveDays} 
    * @param paper {module:model/Paper} 
-   * @param digital {Boolean} 
+   * @param digital {Boolean} Is the product digital?
    */
   var exports = function(id, name, active, paper, digital) {
     var _this = this;
@@ -91,10 +91,12 @@
   }
 
   /**
+   * Identifying code of the product
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
+   * The name of the product
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
@@ -111,6 +113,7 @@
    */
   exports.prototype['paper'] = undefined;
   /**
+   * Is the product digital?
    * @member {Boolean} digital
    */
   exports.prototype['digital'] = undefined;

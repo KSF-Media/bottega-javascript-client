@@ -42,12 +42,12 @@
    * Constructs a new <code>PackageCampaign</code>.
    * @alias module:model/PackageCampaign
    * @class
-   * @param no {Number} 
-   * @param id {String} 
-   * @param name {String} 
-   * @param priceEur {Number} 
-   * @param length {Number} 
-   * @param lengthUnit {String} 
+   * @param no {Number} Campaign number
+   * @param id {String} Campaign id
+   * @param name {String} Campaign name
+   * @param priceEur {Number} Price of campaign in euros
+   * @param length {Number} Length of campaign
+   * @param lengthUnit {module:model/PackageCampaign.LengthUnitEnum} Unit of length (days, weeks, months, years)
    */
   var exports = function(no, id, name, priceEur, length, lengthUnit) {
     var _this = this;
@@ -93,30 +93,63 @@
   }
 
   /**
+   * Campaign number
    * @member {Number} no
    */
   exports.prototype['no'] = undefined;
   /**
+   * Campaign id
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
+   * Campaign name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
+   * Price of campaign in euros
    * @member {Number} priceEur
    */
   exports.prototype['priceEur'] = undefined;
   /**
+   * Length of campaign
    * @member {Number} length
    */
   exports.prototype['length'] = undefined;
   /**
-   * @member {String} lengthUnit
+   * Unit of length (days, weeks, months, years)
+   * @member {module:model/PackageCampaign.LengthUnitEnum} lengthUnit
    */
   exports.prototype['lengthUnit'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>lengthUnit</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.LengthUnitEnum = {
+    /**
+     * value: "Day"
+     * @const
+     */
+    "Day": "Day",
+    /**
+     * value: "Week"
+     * @const
+     */
+    "Week": "Week",
+    /**
+     * value: "Month"
+     * @const
+     */
+    "Month": "Month",
+    /**
+     * value: "Year"
+     * @const
+     */
+    "Year": "Year"  };
 
 
   return exports;

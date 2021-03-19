@@ -42,15 +42,15 @@
    * Constructs a new <code>PackageDescription</code>.
    * @alias module:model/PackageDescription
    * @class
-   * @param brand {String} 
-   * @param brandLong {String} 
-   * @param descShort {String} 
-   * @param descLong {String} 
-   * @param url {String} 
-   * @param days {String} 
-   * @param weekdays {String} 
+   * @param brand {String} Brand name
+   * @param brandLong {String} Brand name, long
+   * @param descShort {String} Short description
+   * @param descLong {String} Long description
+   * @param url {String} Url for the current package
+   * @param days {String} How many days the package is active
+   * @param weekdays {String} Weekdays for which the package is active
    * @param frequency {module:model/DescriptionFrequency} 
-   * @param includes {Array.<String>} 
+   * @param includes {Array.<String>} Entitlements included in the package
    */
   var exports = function(brand, brandLong, descShort, descLong, url, days, weekdays, frequency, includes) {
     var _this = this;
@@ -108,30 +108,37 @@
   }
 
   /**
+   * Brand name
    * @member {String} brand
    */
   exports.prototype['brand'] = undefined;
   /**
+   * Brand name, long
    * @member {String} brandLong
    */
   exports.prototype['brandLong'] = undefined;
   /**
+   * Short description
    * @member {String} descShort
    */
   exports.prototype['descShort'] = undefined;
   /**
+   * Long description
    * @member {String} descLong
    */
   exports.prototype['descLong'] = undefined;
   /**
+   * Url for the current package
    * @member {String} url
    */
   exports.prototype['url'] = undefined;
   /**
+   * How many days the package is active
    * @member {String} days
    */
   exports.prototype['days'] = undefined;
   /**
+   * Weekdays for which the package is active
    * @member {String} weekdays
    */
   exports.prototype['weekdays'] = undefined;
@@ -140,6 +147,7 @@
    */
   exports.prototype['frequency'] = undefined;
   /**
+   * Entitlements included in the package
    * @member {Array.<String>} includes
    */
   exports.prototype['includes'] = undefined;

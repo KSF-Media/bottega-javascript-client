@@ -42,8 +42,8 @@
    * Constructs a new <code>Paper</code>.
    * @alias module:model/Paper
    * @class
-   * @param code {String} 
-   * @param name {String} 
+   * @param code {String} Identifying code of the paper
+   * @param name {String} The name of the paper
    */
   var exports = function(code, name) {
     var _this = this;
@@ -73,10 +73,12 @@
   }
 
   /**
+   * Identifying code of the paper
    * @member {String} code
    */
   exports.prototype['code'] = undefined;
   /**
+   * The name of the paper
    * @member {String} name
    */
   exports.prototype['name'] = undefined;

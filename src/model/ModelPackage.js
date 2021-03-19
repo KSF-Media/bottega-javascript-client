@@ -42,15 +42,15 @@
    * Constructs a new <code>ModelPackage</code>.
    * @alias module:model/ModelPackage
    * @class
-   * @param id {String} 
-   * @param name {String} 
+   * @param id {String} Package identifier
+   * @param name {String} Package name
    * @param paper {module:model/Paper} 
-   * @param digitalOnly {Boolean} 
-   * @param products {Array.<module:model/Product>} 
-   * @param offers {Array.<module:model/PackageOffer>} 
-   * @param campaigns {Array.<module:model/PackageCampaign>} 
-   * @param canPause {Boolean} 
-   * @param canTempAddr {Boolean} 
+   * @param digitalOnly {Boolean} All products in this package are digital
+   * @param products {Array.<module:model/Product>} The Products contained in a package
+   * @param offers {Array.<module:model/PackageOffer>} Offers for the package
+   * @param campaigns {Array.<module:model/PackageCampaign>} Active campaigns for the package
+   * @param canPause {Boolean} Does the package allow delivery pauses
+   * @param canTempAddr {Boolean} Does the package allow temporary address changes
    */
   var exports = function(id, name, paper, digitalOnly, products, offers, campaigns, canPause, canTempAddr) {
     var _this = this;
@@ -114,10 +114,12 @@
   }
 
   /**
+   * Package identifier
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
+   * Package name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
@@ -126,18 +128,22 @@
    */
   exports.prototype['paper'] = undefined;
   /**
+   * All products in this package are digital
    * @member {Boolean} digitalOnly
    */
   exports.prototype['digitalOnly'] = undefined;
   /**
+   * The Products contained in a package
    * @member {Array.<module:model/Product>} products
    */
   exports.prototype['products'] = undefined;
   /**
+   * Offers for the package
    * @member {Array.<module:model/PackageOffer>} offers
    */
   exports.prototype['offers'] = undefined;
   /**
+   * Active campaigns for the package
    * @member {Array.<module:model/PackageCampaign>} campaigns
    */
   exports.prototype['campaigns'] = undefined;
@@ -146,10 +152,12 @@
    */
   exports.prototype['nextDelivery'] = undefined;
   /**
+   * Does the package allow delivery pauses
    * @member {Boolean} canPause
    */
   exports.prototype['canPause'] = undefined;
   /**
+   * Does the package allow temporary address changes
    * @member {Boolean} canTempAddr
    */
   exports.prototype['canTempAddr'] = undefined;

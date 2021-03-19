@@ -42,8 +42,8 @@
    * Constructs a new <code>DescriptionFrequency</code>.
    * @alias module:model/DescriptionFrequency
    * @class
-   * @param amount {Number} 
-   * @param unit {String} 
+   * @param amount {Number} Frequency number for the package
+   * @param unit {String} Unit in which the number is measured
    */
   var exports = function(amount, unit) {
     var _this = this;
@@ -73,10 +73,12 @@
   }
 
   /**
+   * Frequency number for the package
    * @member {Number} amount
    */
   exports.prototype['amount'] = undefined;
   /**
+   * Unit in which the number is measured
    * @member {String} unit
    */
   exports.prototype['unit'] = undefined;

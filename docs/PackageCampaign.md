@@ -4,11 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**no** | **Number** |  | 
-**id** | **String** |  | 
-**name** | **String** |  | 
-**priceEur** | **Number** |  | 
-**length** | **Number** |  | 
-**lengthUnit** | **String** |  | 
+**no** | **Number** | Campaign number | 
+**id** | **String** | Campaign id | 
+**name** | **String** | Campaign name | 
+**priceEur** | **Number** | Price of campaign in euros | 
+**length** | **Number** | Length of campaign | 
+**lengthUnit** | **String** | Unit of length (days, weeks, months, years) | 
+
+
+
+## Enum: LengthUnitEnum
+
+
+* `Day` (value: `"Day"`)
+
+* `Week` (value: `"Week"`)
+
+* `Month` (value: `"Month"`)
+
+* `Year` (value: `"Year"`)
+
+
 
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**months** | **Number** |  | 
-**totalPrice** | **Number** |  | 
-**monthlyPrice** | **Number** |  | 
+**months** | **Number** | Duration of the offer | 
+**totalPrice** | [**Price**](Price.md) |  | 
+**monthlyPrice** | [**Price**](Price.md) |  | 
 
 

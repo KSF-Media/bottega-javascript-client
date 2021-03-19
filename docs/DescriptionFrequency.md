@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **Number** |  | 
-**unit** | **String** |  | 
+**amount** | **Number** | Frequency number for the package | 
+**unit** | **String** | Unit in which the number is measured | 
 
 
