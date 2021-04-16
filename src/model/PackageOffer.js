@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Price'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Price'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.PackageOffer = factory(root.Bottega.ApiClient, root.Bottega.Price);
+    root.Bottega.PackageOffer = factory(root.Bottega.ApiClient);
   }
-}(this, function(ApiClient, Price) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -43,8 +43,8 @@
    * @alias module:model/PackageOffer
    * @class
    * @param months {Number} Duration of the offer
-   * @param totalPrice {module:model/Price} 
-   * @param monthlyPrice {module:model/Price} 
+   * @param totalPrice {Number} Amount of cents that has to be paid
+   * @param monthlyPrice {Number} Amount of cents that has to be paid
    */
   var exports = function(months, totalPrice, monthlyPrice) {
     var _this = this;
@@ -68,10 +68,10 @@
         obj['months'] = ApiClient.convertToType(data['months'], 'Number');
       }
       if (data.hasOwnProperty('totalPrice')) {
-        obj['totalPrice'] = Price.constructFromObject(data['totalPrice']);
+        obj['totalPrice'] = ApiClient.convertToType(data['totalPrice'], 'Number');
       }
       if (data.hasOwnProperty('monthlyPrice')) {
-        obj['monthlyPrice'] = Price.constructFromObject(data['monthlyPrice']);
+        obj['monthlyPrice'] = ApiClient.convertToType(data['monthlyPrice'], 'Number');
       }
     }
     return obj;
@@ -83,11 +83,13 @@
    */
   exports.prototype['months'] = undefined;
   /**
-   * @member {module:model/Price} totalPrice
+   * Amount of cents that has to be paid
+   * @member {Number} totalPrice
    */
   exports.prototype['totalPrice'] = undefined;
   /**
-   * @member {module:model/Price} monthlyPrice
+   * Amount of cents that has to be paid
+   * @member {Number} monthlyPrice
    */
   exports.prototype['monthlyPrice'] = undefined;
 

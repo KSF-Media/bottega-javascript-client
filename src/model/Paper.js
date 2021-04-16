@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/PaperCode'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PaperCode'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.Paper = factory(root.Bottega.ApiClient);
+    root.Bottega.Paper = factory(root.Bottega.ApiClient, root.Bottega.PaperCode);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PaperCode) {
   'use strict';
 
 
@@ -42,7 +42,7 @@
    * Constructs a new <code>Paper</code>.
    * @alias module:model/Paper
    * @class
-   * @param code {String} Identifying code of the paper
+   * @param code {module:model/PaperCode} 
    * @param name {String} The name of the paper
    */
   var exports = function(code, name) {
@@ -63,7 +63,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('code')) {
-        obj['code'] = ApiClient.convertToType(data['code'], 'String');
+        obj['code'] = PaperCode.constructFromObject(data['code']);
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -73,8 +73,7 @@
   }
 
   /**
-   * Identifying code of the paper
-   * @member {String} code
+   * @member {module:model/PaperCode} code
    */
   exports.prototype['code'] = undefined;
   /**
