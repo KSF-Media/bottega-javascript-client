@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | [**PaperCode**](PaperCode.md) |  | 
+**code** | **String** |  | 
 **name** | **String** | The name of the paper | 
 
 
