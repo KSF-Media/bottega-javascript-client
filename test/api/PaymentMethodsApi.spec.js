@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('paymentMethodCreditCardIdRegisterPost', function() {
+      it('should call paymentMethodCreditCardIdRegisterPost successfully', function(done) {
+        //uncomment below and update the code to test paymentMethodCreditCardIdRegisterPost
+        //instance.paymentMethodCreditCardIdRegisterPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('paymentMethodCreditCardIdSubscriptionPut', function() {
       it('should call paymentMethodCreditCardIdSubscriptionPut successfully', function(done) {
         //uncomment below and update the code to test paymentMethodCreditCardIdSubscriptionPut
