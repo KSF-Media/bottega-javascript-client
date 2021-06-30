@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PackageCampaign', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/Product'], factory);
+    define(['ApiClient', 'model/PackageCampaign', 'model/PackageOffer', 'model/Paper', 'model/Product'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PackageCampaign'), require('./PackageDescription'), require('./PackageOffer'), require('./Paper'), require('./Product'));
+    module.exports = factory(require('../ApiClient'), require('./PackageCampaign'), require('./PackageOffer'), require('./Paper'), require('./Product'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.ModelPackage = factory(root.Bottega.ApiClient, root.Bottega.PackageCampaign, root.Bottega.PackageDescription, root.Bottega.PackageOffer, root.Bottega.Paper, root.Bottega.Product);
+    root.Bottega.ModelPackage = factory(root.Bottega.ApiClient, root.Bottega.PackageCampaign, root.Bottega.PackageOffer, root.Bottega.Paper, root.Bottega.Product);
   }
-}(this, function(ApiClient, PackageCampaign, PackageDescription, PackageOffer, Paper, Product) {
+}(this, function(ApiClient, PackageCampaign, PackageOffer, Paper, Product) {
   'use strict';
 
 
@@ -44,6 +44,7 @@
    * @class
    * @param id {String} Package identifier
    * @param name {String} Package name
+   * @param info {Array.<String>} Package description
    * @param paper {module:model/Paper} 
    * @param digitalOnly {Boolean} All products in this package are digital
    * @param products {Array.<module:model/Product>} The Products contained in a package
@@ -52,11 +53,12 @@
    * @param canPause {Boolean} Does the package allow delivery pauses
    * @param canTempAddr {Boolean} Does the package allow temporary address changes
    */
-  var exports = function(id, name, paper, digitalOnly, products, offers, campaigns, canPause, canTempAddr) {
+  var exports = function(id, name, info, paper, digitalOnly, products, offers, campaigns, canPause, canTempAddr) {
     var _this = this;
 
     _this['id'] = id;
     _this['name'] = name;
+    _this['info'] = info;
     _this['paper'] = paper;
     _this['digitalOnly'] = digitalOnly;
     _this['products'] = products;
@@ -82,6 +84,9 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
+      if (data.hasOwnProperty('info')) {
+        obj['info'] = ApiClient.convertToType(data['info'], ['String']);
+      }
       if (data.hasOwnProperty('paper')) {
         obj['paper'] = Paper.constructFromObject(data['paper']);
       }
@@ -106,9 +111,6 @@
       if (data.hasOwnProperty('canTempAddr')) {
         obj['canTempAddr'] = ApiClient.convertToType(data['canTempAddr'], 'Boolean');
       }
-      if (data.hasOwnProperty('description')) {
-        obj['description'] = PackageDescription.constructFromObject(data['description']);
-      }
     }
     return obj;
   }
@@ -123,6 +125,11 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * Package description
+   * @member {Array.<String>} info
+   */
+  exports.prototype['info'] = undefined;
   /**
    * @member {module:model/Paper} paper
    */
@@ -161,10 +168,6 @@
    * @member {Boolean} canTempAddr
    */
   exports.prototype['canTempAddr'] = undefined;
-  /**
-   * @member {module:model/PackageDescription} description
-   */
-  exports.prototype['description'] = undefined;
 
 
 

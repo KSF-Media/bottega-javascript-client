@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Package identifier | 
 **name** | **String** | Package name | 
+**info** | **[String]** | Package description | 
 **paper** | [**Paper**](Paper.md) |  | 
 **digitalOnly** | **Boolean** | All products in this package are digital | 
 **products** | [**[Product]**](Product.md) | The Products contained in a package | 
@@ -14,6 +15,5 @@ Name | Type | Description | Notes
 **nextDelivery** | **Date** |  | [optional] 
 **canPause** | **Boolean** | Does the package allow delivery pauses | 
 **canTempAddr** | **Boolean** | Does the package allow temporary address changes | 
-**description** | [**PackageDescription**](PackageDescription.md) |  | [optional] 
 
 

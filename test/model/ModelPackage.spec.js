@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property info (base name: "info")', function() {
+      // uncomment below and update the code to test the property info
+      //var instance = new Bottega.ModelPackage();
+      //expect(instance).to.be();
+    });
+
     it('should have the property paper (base name: "paper")', function() {
       // uncomment below and update the code to test the property paper
       //var instance = new Bottega.ModelPackage();
@@ -112,12 +118,6 @@
 
     it('should have the property canTempAddr (base name: "canTempAddr")', function() {
       // uncomment below and update the code to test the property canTempAddr
-      //var instance = new Bottega.ModelPackage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
       //var instance = new Bottega.ModelPackage();
       //expect(instance).to.be();
     });
