@@ -48,6 +48,52 @@
 
 
     /**
+     * Callback function to receive the result of the orderCallbackPost operation.
+     * @callback module:api/OrdersApi~orderCallbackPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Handles Nets server side transaction callback
+     * @param {String} body 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:api/OrdersApi~orderCallbackPostCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.orderCallbackPost = function(body, opts, callback) {
+      opts = opts || {};
+      var postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling orderCallbackPost");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/order/callback', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the orderOrderNumberGet operation.
      * @callback module:api/OrdersApi~orderOrderNumberGetCallback
      * @param {String} error Error message, if any.

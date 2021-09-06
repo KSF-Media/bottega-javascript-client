@@ -90,9 +90,8 @@ var Bottega = require('bottega');
 
 
 var api = new Bottega.OrdersApi()
-var orderNumber = "orderNumber_example"; // {String} 
+var body = "body_example"; // {String} 
 var opts = {
-  'authUser': null, // {String} 
   'authorization': "authorization_example" // {String} 
 };
 
@@ -100,10 +99,10 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
-api.orderOrderNumberGet(orderNumber, opts, callback);
+api.orderCallbackPost(body, opts, callback);
 
 ```
 
@@ -113,6 +112,7 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*Bottega.OrdersApi* | [**orderCallbackPost**](docs/OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
 *Bottega.OrdersApi* | [**orderOrderNumberGet**](docs/OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
 *Bottega.OrdersApi* | [**orderOrderNumberPayPost**](docs/OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 *Bottega.OrdersApi* | [**orderPost**](docs/OrdersApi.md#orderPost) | **POST** /order | 

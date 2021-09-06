@@ -4,11 +4,63 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**orderCallbackPost**](OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
 [**orderOrderNumberGet**](OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
 [**orderOrderNumberPayPost**](OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 [**orderPost**](OrdersApi.md#orderPost) | **POST** /order | 
 [**orderProcessOrderGet**](OrdersApi.md#orderProcessOrderGet) | **GET** /order/processOrder | 
 
+
+
+## orderCallbackPost
+
+> orderCallbackPost(body, opts)
+
+
+
+Handles Nets server side transaction callback
+
+### Example
+
+```javascript
+var Bottega = require('bottega');
+
+var apiInstance = new Bottega.OrdersApi();
+var body = "body_example"; // String | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.orderCallbackPost(body, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **String**|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: Not defined
 
 
 ## orderOrderNumberGet

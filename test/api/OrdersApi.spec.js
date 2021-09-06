@@ -50,6 +50,16 @@
   }
 
   describe('OrdersApi', function() {
+    describe('orderCallbackPost', function() {
+      it('should call orderCallbackPost successfully', function(done) {
+        //uncomment below and update the code to test orderCallbackPost
+        //instance.orderCallbackPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('orderOrderNumberGet', function() {
       it('should call orderOrderNumberGet successfully', function(done) {
         //uncomment below and update the code to test orderOrderNumberGet
