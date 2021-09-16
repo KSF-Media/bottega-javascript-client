@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **period** | **Number** |  | [optional] 
 **payAmountCents** | **Number** |  | [optional] 
 **campaignNo** | **Number** |  | [optional] 
+**orderSource** | [**OrderSource**](OrderSource.md) |  | [optional] 
 
 

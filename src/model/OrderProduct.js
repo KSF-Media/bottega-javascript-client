@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/OrderSource'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./OrderSource'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.OrderProduct = factory(root.Bottega.ApiClient);
+    root.Bottega.OrderProduct = factory(root.Bottega.ApiClient, root.Bottega.OrderSource);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, OrderSource) {
   'use strict';
 
 
@@ -72,6 +72,9 @@
       if (data.hasOwnProperty('campaignNo')) {
         obj['campaignNo'] = ApiClient.convertToType(data['campaignNo'], 'Number');
       }
+      if (data.hasOwnProperty('orderSource')) {
+        obj['orderSource'] = OrderSource.constructFromObject(data['orderSource']);
+      }
     }
     return obj;
   }
@@ -92,6 +95,10 @@
    * @member {Number} campaignNo
    */
   exports.prototype['campaignNo'] = undefined;
+  /**
+   * @member {module:model/OrderSource} orderSource
+   */
+  exports.prototype['orderSource'] = undefined;
 
 
 

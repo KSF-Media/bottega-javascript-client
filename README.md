@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
  - [Bottega.ModelPackage](docs/ModelPackage.md)
  - [Bottega.Order](docs/Order.md)
  - [Bottega.OrderProduct](docs/OrderProduct.md)
+ - [Bottega.OrderSource](docs/OrderSource.md)
  - [Bottega.OrderStatus](docs/OrderStatus.md)
  - [Bottega.PackageCampaign](docs/PackageCampaign.md)
  - [Bottega.PackageOffer](docs/PackageOffer.md)

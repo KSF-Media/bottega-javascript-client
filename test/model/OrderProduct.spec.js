@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property orderSource (base name: "orderSource")', function() {
+      // uncomment below and update the code to test the property orderSource
+      //var instance = new Bottega.OrderProduct();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
