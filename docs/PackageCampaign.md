@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **priceEur** | **Number** | Price of campaign in euros | 
 **length** | **Number** | Length of campaign | 
 **lengthUnit** | **String** | Unit of length (days, weeks, months, years) | 
+**startDay** | **Date** |  | [optional] 
+**endDay** | **Date** |  | [optional] 
 
 
 

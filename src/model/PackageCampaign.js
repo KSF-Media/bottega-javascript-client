@@ -88,6 +88,12 @@
       if (data.hasOwnProperty('lengthUnit')) {
         obj['lengthUnit'] = ApiClient.convertToType(data['lengthUnit'], 'String');
       }
+      if (data.hasOwnProperty('startDay')) {
+        obj['startDay'] = ApiClient.convertToType(data['startDay'], 'Date');
+      }
+      if (data.hasOwnProperty('endDay')) {
+        obj['endDay'] = ApiClient.convertToType(data['endDay'], 'Date');
+      }
     }
     return obj;
   }
@@ -122,6 +128,14 @@
    * @member {module:model/PackageCampaign.LengthUnitEnum} lengthUnit
    */
   exports.prototype['lengthUnit'] = undefined;
+  /**
+   * @member {Date} startDay
+   */
+  exports.prototype['startDay'] = undefined;
+  /**
+   * @member {Date} endDay
+   */
+  exports.prototype['endDay'] = undefined;
 
 
   /**

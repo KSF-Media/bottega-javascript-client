@@ -92,6 +92,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property startDay (base name: "startDay")', function() {
+      // uncomment below and update the code to test the property startDay
+      //var instance = new Bottega.PackageCampaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property endDay (base name: "endDay")', function() {
+      // uncomment below and update the code to test the property endDay
+      //var instance = new Bottega.PackageCampaign();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
