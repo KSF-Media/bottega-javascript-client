@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('orderConfirmationPost', function() {
+      it('should call orderConfirmationPost successfully', function(done) {
+        //uncomment below and update the code to test orderConfirmationPost
+        //instance.orderConfirmationPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('orderOrderNumberGet', function() {
       it('should call orderOrderNumberGet successfully', function(done) {
         //uncomment below and update the code to test orderOrderNumberGet

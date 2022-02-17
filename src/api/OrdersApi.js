@@ -57,14 +57,16 @@
 
     /**
      * Handles Nets server side transaction callback
+     * @param {String} authorization 
      * @param {String} body 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
      * @param {module:api/OrdersApi~orderCallbackPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.orderCallbackPost = function(body, opts, callback) {
-      opts = opts || {};
+    this.orderCallbackPost = function(authorization, body, callback) {
       var postBody = body;
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling orderCallbackPost");
+      }
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling orderCallbackPost");
@@ -77,7 +79,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
+        'Authorization': authorization
       };
       var formParams = {
       };
@@ -88,6 +90,127 @@
       var returnType = null;
       return this.apiClient.callApi(
         '/order/callback', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the orderConfirmationPost operation.
+     * @callback module:api/OrdersApi~orderConfirmationPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Send order confirmation from external order creation
+     * @param {String} authorization 
+     * @param {Number} cusno 
+     * @param {String} email 
+     * @param {String} name 
+     * @param {String} lastname 
+     * @param {String} firstname 
+     * @param {String} subscriptionStart 
+     * @param {String} subscriptionEnd 
+     * @param {String} gift 
+     * @param {String} paper 
+     * @param {String} alias 
+     * @param {Number} subsno 
+     * @param {String} extno 
+     * @param {String} productno 
+     * @param {module:api/OrdersApi~orderConfirmationPostCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.orderConfirmationPost = function(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, callback) {
+      var postBody = null;
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'cusno' is set
+      if (cusno === undefined || cusno === null) {
+        throw new Error("Missing the required parameter 'cusno' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'email' is set
+      if (email === undefined || email === null) {
+        throw new Error("Missing the required parameter 'email' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'name' is set
+      if (name === undefined || name === null) {
+        throw new Error("Missing the required parameter 'name' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'lastname' is set
+      if (lastname === undefined || lastname === null) {
+        throw new Error("Missing the required parameter 'lastname' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'firstname' is set
+      if (firstname === undefined || firstname === null) {
+        throw new Error("Missing the required parameter 'firstname' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'subscriptionStart' is set
+      if (subscriptionStart === undefined || subscriptionStart === null) {
+        throw new Error("Missing the required parameter 'subscriptionStart' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'subscriptionEnd' is set
+      if (subscriptionEnd === undefined || subscriptionEnd === null) {
+        throw new Error("Missing the required parameter 'subscriptionEnd' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'gift' is set
+      if (gift === undefined || gift === null) {
+        throw new Error("Missing the required parameter 'gift' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'paper' is set
+      if (paper === undefined || paper === null) {
+        throw new Error("Missing the required parameter 'paper' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'alias' is set
+      if (alias === undefined || alias === null) {
+        throw new Error("Missing the required parameter 'alias' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'subsno' is set
+      if (subsno === undefined || subsno === null) {
+        throw new Error("Missing the required parameter 'subsno' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'extno' is set
+      if (extno === undefined || extno === null) {
+        throw new Error("Missing the required parameter 'extno' when calling orderConfirmationPost");
+      }
+      // verify the required parameter 'productno' is set
+      if (productno === undefined || productno === null) {
+        throw new Error("Missing the required parameter 'productno' when calling orderConfirmationPost");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': authorization
+      };
+      var formParams = {
+        'cusno': cusno,
+        'email': email,
+        'name': name,
+        'lastname': lastname,
+        'firstname': firstname,
+        'subscription_start': subscriptionStart,
+        'subscription_end': subscriptionEnd,
+        'gift': gift,
+        'paper': paper,
+        'alias': alias,
+        'subsno': subsno,
+        'extno': extno,
+        'productno': productno
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/x-www-form-urlencoded'];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/order/confirmation', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

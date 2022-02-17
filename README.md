@@ -90,10 +90,8 @@ var Bottega = require('bottega');
 
 
 var api = new Bottega.OrdersApi()
+var authorization = "authorization_example"; // {String} 
 var body = "body_example"; // {String} 
-var opts = {
-  'authorization': "authorization_example" // {String} 
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -102,7 +100,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.orderCallbackPost(body, opts, callback);
+api.orderCallbackPost(authorization, body, callback);
 
 ```
 
@@ -113,6 +111,7 @@ All URIs are relative to *http://http:/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Bottega.OrdersApi* | [**orderCallbackPost**](docs/OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
+*Bottega.OrdersApi* | [**orderConfirmationPost**](docs/OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
 *Bottega.OrdersApi* | [**orderOrderNumberGet**](docs/OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
 *Bottega.OrdersApi* | [**orderOrderNumberPayPost**](docs/OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 *Bottega.OrdersApi* | [**orderPost**](docs/OrdersApi.md#orderPost) | **POST** /order | 
@@ -134,6 +133,7 @@ Class | Method | HTTP request | Description
  - [Bottega.CreditCard](docs/CreditCard.md)
  - [Bottega.CreditCardRegister](docs/CreditCardRegister.md)
  - [Bottega.CreditCardRegisterStatus](docs/CreditCardRegisterStatus.md)
+ - [Bottega.ExternalOrderConfirmation](docs/ExternalOrderConfirmation.md)
  - [Bottega.InlineResponse400](docs/InlineResponse400.md)
  - [Bottega.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
  - [Bottega.InlineResponse415](docs/InlineResponse415.md)

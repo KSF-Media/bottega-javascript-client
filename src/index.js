@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ActiveDays', 'model/CreditCard', 'model/CreditCardRegister', 'model/CreditCardRegisterStatus', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/ModelPackage', 'model/Order', 'model/OrderProduct', 'model/OrderSource', 'model/OrderStatus', 'model/PackageCampaign', 'model/PackageOffer', 'model/Paper', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product', 'api/OrdersApi', 'api/PackagesApi', 'api/PaymentMethodsApi'], factory);
+    define(['ApiClient', 'model/ActiveDays', 'model/CreditCard', 'model/CreditCardRegister', 'model/CreditCardRegisterStatus', 'model/ExternalOrderConfirmation', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/ModelPackage', 'model/Order', 'model/OrderProduct', 'model/OrderSource', 'model/OrderStatus', 'model/PackageCampaign', 'model/PackageOffer', 'model/Paper', 'model/PaymentOption', 'model/PaymentTerminalUrl', 'model/Product', 'api/OrdersApi', 'api/PackagesApi', 'api/PaymentMethodsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/CreditCard'), require('./model/CreditCardRegister'), require('./model/CreditCardRegisterStatus'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderProduct'), require('./model/OrderSource'), require('./model/OrderStatus'), require('./model/PackageCampaign'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/OrdersApi'), require('./api/PackagesApi'), require('./api/PaymentMethodsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/CreditCard'), require('./model/CreditCardRegister'), require('./model/CreditCardRegisterStatus'), require('./model/ExternalOrderConfirmation'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderProduct'), require('./model/OrderSource'), require('./model/OrderStatus'), require('./model/PackageCampaign'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PaymentOption'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/OrdersApi'), require('./api/PackagesApi'), require('./api/PaymentMethodsApi'));
   }
-}(function(ApiClient, ActiveDays, CreditCard, CreditCardRegister, CreditCardRegisterStatus, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, ModelPackage, Order, OrderProduct, OrderSource, OrderStatus, PackageCampaign, PackageOffer, Paper, PaymentOption, PaymentTerminalUrl, Product, OrdersApi, PackagesApi, PaymentMethodsApi) {
+}(function(ApiClient, ActiveDays, CreditCard, CreditCardRegister, CreditCardRegisterStatus, ExternalOrderConfirmation, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, ModelPackage, Order, OrderProduct, OrderSource, OrderStatus, PackageCampaign, PackageOffer, Paper, PaymentOption, PaymentTerminalUrl, Product, OrdersApi, PackagesApi, PaymentMethodsApi) {
   'use strict';
 
   /**
@@ -81,6 +81,11 @@
      * @property {module:model/CreditCardRegisterStatus}
      */
     CreditCardRegisterStatus: CreditCardRegisterStatus,
+    /**
+     * The ExternalOrderConfirmation model constructor.
+     * @property {module:model/ExternalOrderConfirmation}
+     */
+    ExternalOrderConfirmation: ExternalOrderConfirmation,
     /**
      * The InlineResponse400 model constructor.
      * @property {module:model/InlineResponse400}
