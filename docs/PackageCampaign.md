@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **name** | **String** | Campaign name | 
 **priceEur** | **Number** | Price of campaign in euros | 
 **length** | **Number** | Length of campaign | 
-**lengthUnit** | **String** | Unit of length (days, weeks, months, years) | 
+**lengthUnit** | **String** |  | 
 **startDay** | **Date** |  | [optional] 
 **endDay** | **Date** |  | [optional] 
 

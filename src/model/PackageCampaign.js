@@ -47,7 +47,7 @@
    * @param name {String} Campaign name
    * @param priceEur {Number} Price of campaign in euros
    * @param length {Number} Length of campaign
-   * @param lengthUnit {module:model/PackageCampaign.LengthUnitEnum} Unit of length (days, weeks, months, years)
+   * @param lengthUnit {module:model/PackageCampaign.LengthUnitEnum} 
    */
   var exports = function(no, id, name, priceEur, length, lengthUnit) {
     var _this = this;
@@ -124,7 +124,6 @@
    */
   exports.prototype['length'] = undefined;
   /**
-   * Unit of length (days, weeks, months, years)
    * @member {module:model/PackageCampaign.LengthUnitEnum} lengthUnit
    */
   exports.prototype['lengthUnit'] = undefined;
