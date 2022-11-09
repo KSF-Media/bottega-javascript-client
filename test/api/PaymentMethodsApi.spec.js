@@ -100,16 +100,6 @@
         done();
       });
     });
-    describe('paymentMethodCreditCardIdSubscriptionPut', function() {
-      it('should call paymentMethodCreditCardIdSubscriptionPut successfully', function(done) {
-        //uncomment below and update the code to test paymentMethodCreditCardIdSubscriptionPut
-        //instance.paymentMethodCreditCardIdSubscriptionPut(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('paymentMethodCreditCardRegisterPost', function() {
       it('should call paymentMethodCreditCardRegisterPost successfully', function(done) {
         //uncomment below and update the code to test paymentMethodCreditCardRegisterPost
