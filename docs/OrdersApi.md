@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**orderCallbackPost**](OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
 [**orderConfirmationPost**](OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
+[**orderGiftGiftCodeGet**](OrdersApi.md#orderGiftGiftCodeGet) | **GET** /order/gift/{giftCode} | 
+[**orderGiftGiftCodePut**](OrdersApi.md#orderGiftGiftCodePut) | **PUT** /order/gift/{giftCode} | 
 [**orderOrderNumberGet**](OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
 [**orderOrderNumberPayPost**](OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 [**orderPost**](OrdersApi.md#orderPost) | **POST** /order | 
@@ -132,6 +134,106 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/x-www-form-urlencoded
+- **Accept**: Not defined
+
+
+## orderGiftGiftCodeGet
+
+> Gift orderGiftGiftCodeGet(giftCode)
+
+
+
+Query a gift code
+
+### Example
+
+```javascript
+var Bottega = require('bottega');
+
+var apiInstance = new Bottega.OrdersApi();
+var giftCode = "giftCode_example"; // String | 
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.orderGiftGiftCodeGet(giftCode, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **giftCode** | **String**|  | 
+
+### Return type
+
+[**Gift**](Gift.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+
+## orderGiftGiftCodePut
+
+> orderGiftGiftCodePut(giftCode, opts)
+
+
+
+Redeem a gift code to get subscription
+
+### Example
+
+```javascript
+var Bottega = require('bottega');
+
+var apiInstance = new Bottega.OrdersApi();
+var giftCode = "giftCode_example"; // String | 
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.orderGiftGiftCodePut(giftCode, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **giftCode** | **String**|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: Not defined
 
 

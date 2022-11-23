@@ -86,6 +86,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property gift (base name: "gift")', function() {
+      // uncomment below and update the code to test the property gift
+      //var instance = new Bottega.OrderProduct();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

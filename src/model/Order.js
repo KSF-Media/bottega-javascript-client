@@ -73,6 +73,9 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = OrderStatus.constructFromObject(data['status']);
       }
+      if (data.hasOwnProperty('giftCode')) {
+        obj['giftCode'] = ApiClient.convertToType(data['giftCode'], 'String');
+      }
     }
     return obj;
   }
@@ -89,6 +92,10 @@
    * @member {module:model/OrderStatus} status
    */
   exports.prototype['status'] = undefined;
+  /**
+   * @member {String} giftCode
+   */
+  exports.prototype['giftCode'] = undefined;
 
 
 

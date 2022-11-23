@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **payAmountCents** | **Number** |  | [optional] 
 **campaignNo** | **Number** |  | [optional] 
 **orderSource** | [**OrderSource**](OrderSource.md) |  | [optional] 
+**gift** | **Boolean** |  | [optional] 
 
 

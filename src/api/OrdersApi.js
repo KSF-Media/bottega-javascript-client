@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/OrderProduct', 'model/PaymentOption', 'model/PaymentTerminalUrl'], factory);
+    define(['ApiClient', 'model/Gift', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/OrderProduct', 'model/PaymentOption', 'model/PaymentTerminalUrl'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/OrderProduct'), require('../model/PaymentOption'), require('../model/PaymentTerminalUrl'));
+    module.exports = factory(require('../ApiClient'), require('../model/Gift'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/OrderProduct'), require('../model/PaymentOption'), require('../model/PaymentTerminalUrl'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.OrderProduct, root.Bottega.PaymentOption, root.Bottega.PaymentTerminalUrl);
+    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.Gift, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.OrderProduct, root.Bottega.PaymentOption, root.Bottega.PaymentTerminalUrl);
   }
-}(this, function(ApiClient, InlineResponse400, InlineResponse415, Order, OrderProduct, PaymentOption, PaymentTerminalUrl) {
+}(this, function(ApiClient, Gift, InlineResponse400, InlineResponse415, Order, OrderProduct, PaymentOption, PaymentTerminalUrl) {
   'use strict';
 
   /**
@@ -211,6 +211,99 @@
       var returnType = null;
       return this.apiClient.callApi(
         '/order/confirmation', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the orderGiftGiftCodeGet operation.
+     * @callback module:api/OrdersApi~orderGiftGiftCodeGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Gift} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Query a gift code
+     * @param {String} giftCode 
+     * @param {module:api/OrdersApi~orderGiftGiftCodeGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Gift}
+     */
+    this.orderGiftGiftCodeGet = function(giftCode, callback) {
+      var postBody = null;
+      // verify the required parameter 'giftCode' is set
+      if (giftCode === undefined || giftCode === null) {
+        throw new Error("Missing the required parameter 'giftCode' when calling orderGiftGiftCodeGet");
+      }
+
+      var pathParams = {
+        'giftCode': giftCode
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = Gift;
+      return this.apiClient.callApi(
+        '/order/gift/{giftCode}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the orderGiftGiftCodePut operation.
+     * @callback module:api/OrdersApi~orderGiftGiftCodePutCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Redeem a gift code to get subscription
+     * @param {String} giftCode 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/OrdersApi~orderGiftGiftCodePutCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.orderGiftGiftCodePut = function(giftCode, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'giftCode' is set
+      if (giftCode === undefined || giftCode === null) {
+        throw new Error("Missing the required parameter 'giftCode' when calling orderGiftGiftCodePut");
+      }
+
+      var pathParams = {
+        'giftCode': giftCode
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/order/gift/{giftCode}', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

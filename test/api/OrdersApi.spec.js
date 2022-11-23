@@ -70,6 +70,26 @@
         done();
       });
     });
+    describe('orderGiftGiftCodeGet', function() {
+      it('should call orderGiftGiftCodeGet successfully', function(done) {
+        //uncomment below and update the code to test orderGiftGiftCodeGet
+        //instance.orderGiftGiftCodeGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('orderGiftGiftCodePut', function() {
+      it('should call orderGiftGiftCodePut successfully', function(done) {
+        //uncomment below and update the code to test orderGiftGiftCodePut
+        //instance.orderGiftGiftCodePut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('orderOrderNumberGet', function() {
       it('should call orderOrderNumberGet successfully', function(done) {
         //uncomment below and update the code to test orderOrderNumberGet

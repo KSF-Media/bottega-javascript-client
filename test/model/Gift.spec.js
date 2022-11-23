@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Bottega.Order();
+    instance = new Bottega.Gift();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,34 +49,28 @@
       object[property] = value;
   }
 
-  describe('Order', function() {
-    it('should create an instance of Order', function() {
-      // uncomment below and update the code to test Order
-      //var instance = new Bottega.Order();
-      //expect(instance).to.be.a(Bottega.Order);
+  describe('Gift', function() {
+    it('should create an instance of Gift', function() {
+      // uncomment below and update the code to test Gift
+      //var instance = new Bottega.Gift();
+      //expect(instance).to.be.a(Bottega.Gift);
     });
 
-    it('should have the property _number (base name: "number")', function() {
-      // uncomment below and update the code to test the property _number
-      //var instance = new Bottega.Order();
+    it('should have the property owner (base name: "owner")', function() {
+      // uncomment below and update the code to test the property owner
+      //var instance = new Bottega.Gift();
       //expect(instance).to.be();
     });
 
-    it('should have the property user (base name: "user")', function() {
-      // uncomment below and update the code to test the property user
-      //var instance = new Bottega.Order();
+    it('should have the property _package (base name: "package")', function() {
+      // uncomment below and update the code to test the property _package
+      //var instance = new Bottega.Gift();
       //expect(instance).to.be();
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new Bottega.Order();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property giftCode (base name: "giftCode")', function() {
-      // uncomment below and update the code to test the property giftCode
-      //var instance = new Bottega.Order();
+    it('should have the property used (base name: "used")', function() {
+      // uncomment below and update the code to test the property used
+      //var instance = new Bottega.Gift();
       //expect(instance).to.be();
     });
 

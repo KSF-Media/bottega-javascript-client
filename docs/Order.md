@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **_number** | **String** |  | 
 **user** | **String** |  | 
 **status** | [**OrderStatus**](OrderStatus.md) |  | 
+**giftCode** | **String** |  | [optional] 
 
 
