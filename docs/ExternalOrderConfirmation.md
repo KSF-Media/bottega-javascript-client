@@ -17,5 +17,9 @@ Name | Type | Description | Notes
 **subsno** | **Number** |  | 
 **extno** | **String** |  | 
 **productno** | **String** |  | 
+**productname** | **String** |  | [optional] 
+**price** | **String** |  | [optional] 
+**invmode** | **String** |  | [optional] 
+**campname** | **String** |  | [optional] 
 
 

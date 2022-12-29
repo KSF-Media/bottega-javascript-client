@@ -134,6 +134,30 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property productname (base name: "productname")', function() {
+      // uncomment below and update the code to test the property productname
+      //var instance = new Bottega.ExternalOrderConfirmation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property price (base name: "price")', function() {
+      // uncomment below and update the code to test the property price
+      //var instance = new Bottega.ExternalOrderConfirmation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property invmode (base name: "invmode")', function() {
+      // uncomment below and update the code to test the property invmode
+      //var instance = new Bottega.ExternalOrderConfirmation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property campname (base name: "campname")', function() {
+      // uncomment below and update the code to test the property campname
+      //var instance = new Bottega.ExternalOrderConfirmation();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

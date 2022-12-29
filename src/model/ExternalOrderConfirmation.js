@@ -123,6 +123,18 @@
       if (data.hasOwnProperty('productno')) {
         obj['productno'] = ApiClient.convertToType(data['productno'], 'String');
       }
+      if (data.hasOwnProperty('productname')) {
+        obj['productname'] = ApiClient.convertToType(data['productname'], 'String');
+      }
+      if (data.hasOwnProperty('price')) {
+        obj['price'] = ApiClient.convertToType(data['price'], 'String');
+      }
+      if (data.hasOwnProperty('invmode')) {
+        obj['invmode'] = ApiClient.convertToType(data['invmode'], 'String');
+      }
+      if (data.hasOwnProperty('campname')) {
+        obj['campname'] = ApiClient.convertToType(data['campname'], 'String');
+      }
     }
     return obj;
   }
@@ -179,6 +191,22 @@
    * @member {String} productno
    */
   exports.prototype['productno'] = undefined;
+  /**
+   * @member {String} productname
+   */
+  exports.prototype['productname'] = undefined;
+  /**
+   * @member {String} price
+   */
+  exports.prototype['price'] = undefined;
+  /**
+   * @member {String} invmode
+   */
+  exports.prototype['invmode'] = undefined;
+  /**
+   * @member {String} campname
+   */
+  exports.prototype['campname'] = undefined;
 
 
 

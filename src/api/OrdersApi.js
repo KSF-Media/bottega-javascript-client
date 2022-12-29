@@ -119,9 +119,15 @@
      * @param {Number} subsno 
      * @param {String} extno 
      * @param {String} productno 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.productname 
+     * @param {String} opts.price 
+     * @param {String} opts.invmode 
+     * @param {String} opts.campname 
      * @param {module:api/OrdersApi~orderConfirmationPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.orderConfirmationPost = function(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, callback) {
+    this.orderConfirmationPost = function(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, opts, callback) {
+      opts = opts || {};
       var postBody = null;
       // verify the required parameter 'authorization' is set
       if (authorization === undefined || authorization === null) {
@@ -202,7 +208,11 @@
         'alias': alias,
         'subsno': subsno,
         'extno': extno,
-        'productno': productno
+        'productno': productno,
+        'productname': opts['productname'],
+        'price': opts['price'],
+        'invmode': opts['invmode'],
+        'campname': opts['campname']
       };
 
       var authNames = [];

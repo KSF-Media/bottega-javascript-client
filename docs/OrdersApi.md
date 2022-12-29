@@ -66,7 +66,7 @@ No authorization required
 
 ## orderConfirmationPost
 
-> orderConfirmationPost(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno)
+> orderConfirmationPost(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, opts)
 
 
 
@@ -92,6 +92,12 @@ var alias = "alias_example"; // String |
 var subsno = 56; // Number | 
 var extno = "extno_example"; // String | 
 var productno = "productno_example"; // String | 
+var opts = {
+  'productname': "productname_example", // String | 
+  'price': "price_example", // String | 
+  'invmode': "invmode_example", // String | 
+  'campname': "campname_example" // String | 
+};
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -99,7 +105,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.orderConfirmationPost(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, callback);
+apiInstance.orderConfirmationPost(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, opts, callback);
 ```
 
 ### Parameters
@@ -122,6 +128,10 @@ Name | Type | Description  | Notes
  **subsno** | **Number**|  | 
  **extno** | **String**|  | 
  **productno** | **String**|  | 
+ **productname** | **String**|  | [optional] 
+ **price** | **String**|  | [optional] 
+ **invmode** | **String**|  | [optional] 
+ **campname** | **String**|  | [optional] 
 
 ### Return type
 
