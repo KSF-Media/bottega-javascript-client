@@ -53,7 +53,7 @@
    * @param paper {String} 
    * @param alias {String} 
    * @param subsno {Number} 
-   * @param extno {String} 
+   * @param extno {Number} 
    * @param productno {String} 
    */
   var exports = function(cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno) {
@@ -118,7 +118,7 @@
         obj['subsno'] = ApiClient.convertToType(data['subsno'], 'Number');
       }
       if (data.hasOwnProperty('extno')) {
-        obj['extno'] = ApiClient.convertToType(data['extno'], 'String');
+        obj['extno'] = ApiClient.convertToType(data['extno'], 'Number');
       }
       if (data.hasOwnProperty('productno')) {
         obj['productno'] = ApiClient.convertToType(data['productno'], 'String');
@@ -184,7 +184,7 @@
    */
   exports.prototype['subsno'] = undefined;
   /**
-   * @member {String} extno
+   * @member {Number} extno
    */
   exports.prototype['extno'] = undefined;
   /**

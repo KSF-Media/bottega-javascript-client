@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **paper** | **String** |  | 
 **alias** | **String** |  | 
 **subsno** | **Number** |  | 
-**extno** | **String** |  | 
+**extno** | **Number** |  | 
 **productno** | **String** |  | 
 **productname** | **String** |  | [optional] 
 **price** | **String** |  | [optional] 

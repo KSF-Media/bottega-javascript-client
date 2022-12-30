@@ -117,7 +117,7 @@
      * @param {String} paper 
      * @param {String} alias 
      * @param {Number} subsno 
-     * @param {String} extno 
+     * @param {Number} extno 
      * @param {String} productno 
      * @param {Object} opts Optional parameters
      * @param {String} opts.productname 

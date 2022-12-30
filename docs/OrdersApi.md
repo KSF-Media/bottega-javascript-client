@@ -90,7 +90,7 @@ var gift = "gift_example"; // String |
 var paper = "paper_example"; // String | 
 var alias = "alias_example"; // String | 
 var subsno = 56; // Number | 
-var extno = "extno_example"; // String | 
+var extno = 56; // Number | 
 var productno = "productno_example"; // String | 
 var opts = {
   'productname': "productname_example", // String | 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
  **paper** | **String**|  | 
  **alias** | **String**|  | 
  **subsno** | **Number**|  | 
- **extno** | **String**|  | 
+ **extno** | **Number**|  | 
  **productno** | **String**|  | 
  **productname** | **String**|  | [optional] 
  **price** | **String**|  | [optional] 
