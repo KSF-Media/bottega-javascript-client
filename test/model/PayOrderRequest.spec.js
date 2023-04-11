@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Bottega.PaymentOption();
+    instance = new Bottega.PayOrderRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,16 +49,22 @@
       object[property] = value;
   }
 
-  describe('PaymentOption', function() {
-    it('should create an instance of PaymentOption', function() {
-      // uncomment below and update the code to test PaymentOption
-      //var instance = new Bottega.PaymentOption();
-      //expect(instance).to.be.a(Bottega.PaymentOption);
+  describe('PayOrderRequest', function() {
+    it('should create an instance of PayOrderRequest', function() {
+      // uncomment below and update the code to test PayOrderRequest
+      //var instance = new Bottega.PayOrderRequest();
+      //expect(instance).to.be.a(Bottega.PayOrderRequest);
     });
 
     it('should have the property paymentOption (base name: "paymentOption")', function() {
       // uncomment below and update the code to test the property paymentOption
-      //var instance = new Bottega.PaymentOption();
+      //var instance = new Bottega.PayOrderRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property klarnaData (base name: "klarnaData")', function() {
+      // uncomment below and update the code to test the property klarnaData
+      //var instance = new Bottega.PayOrderRequest();
       //expect(instance).to.be();
     });
 

@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *Bottega.OrdersApi* | [**orderConfirmationPost**](docs/OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
 *Bottega.OrdersApi* | [**orderGiftGiftCodeGet**](docs/OrdersApi.md#orderGiftGiftCodeGet) | **GET** /order/gift/{giftCode} | 
 *Bottega.OrdersApi* | [**orderGiftGiftCodePut**](docs/OrdersApi.md#orderGiftGiftCodePut) | **PUT** /order/gift/{giftCode} | 
+*Bottega.OrdersApi* | [**orderInitKlarnaPost**](docs/OrdersApi.md#orderInitKlarnaPost) | **POST** /order/initKlarna | 
 *Bottega.OrdersApi* | [**orderOrderNumberGet**](docs/OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
 *Bottega.OrdersApi* | [**orderOrderNumberPayPost**](docs/OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 *Bottega.OrdersApi* | [**orderPost**](docs/OrdersApi.md#orderPost) | **POST** /order | 
@@ -140,6 +141,10 @@ Class | Method | HTTP request | Description
  - [Bottega.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
  - [Bottega.InlineResponse415](docs/InlineResponse415.md)
  - [Bottega.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
+ - [Bottega.KlarnaAddress](docs/KlarnaAddress.md)
+ - [Bottega.KlarnaConfirmPayment](docs/KlarnaConfirmPayment.md)
+ - [Bottega.KlarnaInitResponse](docs/KlarnaInitResponse.md)
+ - [Bottega.KlarnaOrderProduct](docs/KlarnaOrderProduct.md)
  - [Bottega.ModelPackage](docs/ModelPackage.md)
  - [Bottega.Order](docs/Order.md)
  - [Bottega.OrderProduct](docs/OrderProduct.md)
@@ -148,7 +153,7 @@ Class | Method | HTTP request | Description
  - [Bottega.PackageCampaign](docs/PackageCampaign.md)
  - [Bottega.PackageOffer](docs/PackageOffer.md)
  - [Bottega.Paper](docs/Paper.md)
- - [Bottega.PaymentOption](docs/PaymentOption.md)
+ - [Bottega.PayOrderRequest](docs/PayOrderRequest.md)
  - [Bottega.PaymentTerminalUrl](docs/PaymentTerminalUrl.md)
  - [Bottega.Product](docs/Product.md)
 

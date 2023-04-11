@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Gift', 'model/InlineResponse400', 'model/InlineResponse415', 'model/Order', 'model/OrderProduct', 'model/PaymentOption', 'model/PaymentTerminalUrl'], factory);
+    define(['ApiClient', 'model/Gift', 'model/InlineResponse400', 'model/InlineResponse415', 'model/KlarnaInitResponse', 'model/KlarnaOrderProduct', 'model/Order', 'model/OrderProduct', 'model/PayOrderRequest', 'model/PaymentTerminalUrl'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Gift'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/Order'), require('../model/OrderProduct'), require('../model/PaymentOption'), require('../model/PaymentTerminalUrl'));
+    module.exports = factory(require('../ApiClient'), require('../model/Gift'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/KlarnaInitResponse'), require('../model/KlarnaOrderProduct'), require('../model/Order'), require('../model/OrderProduct'), require('../model/PayOrderRequest'), require('../model/PaymentTerminalUrl'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.Gift, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.Order, root.Bottega.OrderProduct, root.Bottega.PaymentOption, root.Bottega.PaymentTerminalUrl);
+    root.Bottega.OrdersApi = factory(root.Bottega.ApiClient, root.Bottega.Gift, root.Bottega.InlineResponse400, root.Bottega.InlineResponse415, root.Bottega.KlarnaInitResponse, root.Bottega.KlarnaOrderProduct, root.Bottega.Order, root.Bottega.OrderProduct, root.Bottega.PayOrderRequest, root.Bottega.PaymentTerminalUrl);
   }
-}(this, function(ApiClient, Gift, InlineResponse400, InlineResponse415, Order, OrderProduct, PaymentOption, PaymentTerminalUrl) {
+}(this, function(ApiClient, Gift, InlineResponse400, InlineResponse415, KlarnaInitResponse, KlarnaOrderProduct, Order, OrderProduct, PayOrderRequest, PaymentTerminalUrl) {
   'use strict';
 
   /**
@@ -320,6 +320,49 @@
     }
 
     /**
+     * Callback function to receive the result of the orderInitKlarnaPost operation.
+     * @callback module:api/OrdersApi~orderInitKlarnaPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/KlarnaInitResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Initialize a Klarna payment
+     * @param {module:model/KlarnaOrderProduct} body 
+     * @param {module:api/OrdersApi~orderInitKlarnaPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/KlarnaInitResponse}
+     */
+    this.orderInitKlarnaPost = function(body, callback) {
+      var postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling orderInitKlarnaPost");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = KlarnaInitResponse;
+      return this.apiClient.callApi(
+        '/order/initKlarna', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the orderOrderNumberGet operation.
      * @callback module:api/OrdersApi~orderOrderNumberGetCallback
      * @param {String} error Error message, if any.
@@ -380,7 +423,7 @@
     /**
      * Pay for an Order, marking it as ready for processing
      * @param {String} orderNumber 
-     * @param {module:model/PaymentOption} body 
+     * @param {module:model/PayOrderRequest} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 

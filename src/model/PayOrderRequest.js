@@ -16,31 +16,31 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/KlarnaConfirmPayment'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./KlarnaConfirmPayment'));
   } else {
     // Browser globals (root is window)
     if (!root.Bottega) {
       root.Bottega = {};
     }
-    root.Bottega.PaymentOption = factory(root.Bottega.ApiClient);
+    root.Bottega.PayOrderRequest = factory(root.Bottega.ApiClient, root.Bottega.KlarnaConfirmPayment);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, KlarnaConfirmPayment) {
   'use strict';
 
 
 
   /**
-   * The PaymentOption model module.
-   * @module model/PaymentOption
+   * The PayOrderRequest model module.
+   * @module model/PayOrderRequest
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>PaymentOption</code>.
-   * @alias module:model/PaymentOption
+   * Constructs a new <code>PayOrderRequest</code>.
+   * @alias module:model/PayOrderRequest
    * @class
    * @param paymentOption {String} 
    */
@@ -51,17 +51,20 @@
   };
 
   /**
-   * Constructs a <code>PaymentOption</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PayOrderRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PaymentOption} obj Optional instance to populate.
-   * @return {module:model/PaymentOption} The populated <code>PaymentOption</code> instance.
+   * @param {module:model/PayOrderRequest} obj Optional instance to populate.
+   * @return {module:model/PayOrderRequest} The populated <code>PayOrderRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('paymentOption')) {
         obj['paymentOption'] = ApiClient.convertToType(data['paymentOption'], 'String');
+      }
+      if (data.hasOwnProperty('klarnaData')) {
+        obj['klarnaData'] = KlarnaConfirmPayment.constructFromObject(data['klarnaData']);
       }
     }
     return obj;
@@ -71,6 +74,10 @@
    * @member {String} paymentOption
    */
   exports.prototype['paymentOption'] = undefined;
+  /**
+   * @member {module:model/KlarnaConfirmPayment} klarnaData
+   */
+  exports.prototype['klarnaData'] = undefined;
 
 
 

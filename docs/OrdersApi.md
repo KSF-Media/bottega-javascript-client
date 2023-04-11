@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**orderConfirmationPost**](OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
 [**orderGiftGiftCodeGet**](OrdersApi.md#orderGiftGiftCodeGet) | **GET** /order/gift/{giftCode} | 
 [**orderGiftGiftCodePut**](OrdersApi.md#orderGiftGiftCodePut) | **PUT** /order/gift/{giftCode} | 
+[**orderInitKlarnaPost**](OrdersApi.md#orderInitKlarnaPost) | **POST** /order/initKlarna | 
 [**orderOrderNumberGet**](OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
 [**orderOrderNumberPayPost**](OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 [**orderPost**](OrdersApi.md#orderPost) | **POST** /order | 
@@ -247,6 +248,53 @@ No authorization required
 - **Accept**: Not defined
 
 
+## orderInitKlarnaPost
+
+> KlarnaInitResponse orderInitKlarnaPost(body)
+
+
+
+Initialize a Klarna payment
+
+### Example
+
+```javascript
+var Bottega = require('bottega');
+
+var apiInstance = new Bottega.OrdersApi();
+var body = new Bottega.KlarnaOrderProduct(); // KlarnaOrderProduct | 
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.orderInitKlarnaPost(body, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**KlarnaOrderProduct**](KlarnaOrderProduct.md)|  | 
+
+### Return type
+
+[**KlarnaInitResponse**](KlarnaInitResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
 ## orderOrderNumberGet
 
 > Order orderOrderNumberGet(orderNumber, opts)
@@ -315,7 +363,7 @@ var Bottega = require('bottega');
 
 var apiInstance = new Bottega.OrdersApi();
 var orderNumber = "orderNumber_example"; // String | 
-var body = new Bottega.PaymentOption(); // PaymentOption | 
+var body = new Bottega.PayOrderRequest(); // PayOrderRequest | 
 var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
@@ -337,7 +385,7 @@ apiInstance.orderOrderNumberPayPost(orderNumber, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderNumber** | **String**|  | 
- **body** | [**PaymentOption**](PaymentOption.md)|  | 
+ **body** | [**PayOrderRequest**](PayOrderRequest.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 

@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('orderInitKlarnaPost', function() {
+      it('should call orderInitKlarnaPost successfully', function(done) {
+        //uncomment below and update the code to test orderInitKlarnaPost
+        //instance.orderInitKlarnaPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('orderOrderNumberGet', function() {
       it('should call orderOrderNumberGet successfully', function(done) {
         //uncomment below and update the code to test orderOrderNumberGet
