@@ -89,9 +89,9 @@ Please follow the [installation](#installation) instruction and execute the foll
 var Bottega = require('bottega');
 
 
-var api = new Bottega.OrdersApi()
+var api = new Bottega.HooksApi()
 var authorization = "authorization_example"; // {String} 
-var body = "body_example"; // {String} 
+var body = new Bottega.KayakWebhookEvent(); // {KayakWebhookEvent} 
 
 var callback = function(error, data, response) {
   if (error) {
@@ -100,7 +100,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.orderCallbackPost(authorization, body, callback);
+api.hooksPost(authorization, body, callback);
 
 ```
 
@@ -110,6 +110,7 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*Bottega.HooksApi* | [**hooksPost**](docs/HooksApi.md#hooksPost) | **POST** /hooks | 
 *Bottega.OrdersApi* | [**orderCallbackPost**](docs/OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
 *Bottega.OrdersApi* | [**orderConfirmationPost**](docs/OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
 *Bottega.OrdersApi* | [**orderGiftGiftCodeGet**](docs/OrdersApi.md#orderGiftGiftCodeGet) | **GET** /order/gift/{giftCode} | 
@@ -141,6 +142,7 @@ Class | Method | HTTP request | Description
  - [Bottega.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
  - [Bottega.InlineResponse415](docs/InlineResponse415.md)
  - [Bottega.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
+ - [Bottega.KayakWebhookEvent](docs/KayakWebhookEvent.md)
  - [Bottega.KlarnaAddress](docs/KlarnaAddress.md)
  - [Bottega.KlarnaConfirmPayment](docs/KlarnaConfirmPayment.md)
  - [Bottega.KlarnaInitResponse](docs/KlarnaInitResponse.md)
