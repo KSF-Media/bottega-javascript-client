@@ -90,7 +90,6 @@ var Bottega = require('bottega');
 
 
 var api = new Bottega.HooksApi()
-var authorization = "authorization_example"; // {String} 
 var body = new Bottega.KayakWebhookEvent(); // {KayakWebhookEvent} 
 
 var callback = function(error, data, response) {
@@ -100,7 +99,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.hooksPost(authorization, body, callback);
+api.hooksKayakPost(body, callback);
 
 ```
 
@@ -110,7 +109,7 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Bottega.HooksApi* | [**hooksPost**](docs/HooksApi.md#hooksPost) | **POST** /hooks | 
+*Bottega.HooksApi* | [**hooksKayakPost**](docs/HooksApi.md#hooksKayakPost) | **POST** /hooks/kayak | 
 *Bottega.OrdersApi* | [**orderCallbackPost**](docs/OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
 *Bottega.OrdersApi* | [**orderConfirmationPost**](docs/OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
 *Bottega.OrdersApi* | [**orderGiftGiftCodeGet**](docs/OrdersApi.md#orderGiftGiftCodeGet) | **GET** /order/gift/{giftCode} | 

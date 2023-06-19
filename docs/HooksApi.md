@@ -4,13 +4,13 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**hooksPost**](HooksApi.md#hooksPost) | **POST** /hooks | 
+[**hooksKayakPost**](HooksApi.md#hooksKayakPost) | **POST** /hooks/kayak | 
 
 
 
-## hooksPost
+## hooksKayakPost
 
-> hooksPost(authorization, body)
+> hooksKayakPost(body)
 
 
 
@@ -22,7 +22,6 @@ Kayak webhook
 var Bottega = require('bottega');
 
 var apiInstance = new Bottega.HooksApi();
-var authorization = "authorization_example"; // String | 
 var body = new Bottega.KayakWebhookEvent(); // KayakWebhookEvent | 
 var callback = function(error, data, response) {
   if (error) {
@@ -31,7 +30,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.hooksPost(authorization, body, callback);
+apiInstance.hooksKayakPost(body, callback);
 ```
 
 ### Parameters
@@ -40,7 +39,6 @@ apiInstance.hooksPost(authorization, body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**|  | 
  **body** | [**KayakWebhookEvent**](KayakWebhookEvent.md)|  | 
 
 ### Return type

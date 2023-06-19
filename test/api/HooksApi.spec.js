@@ -50,10 +50,10 @@
   }
 
   describe('HooksApi', function() {
-    describe('hooksPost', function() {
-      it('should call hooksPost successfully', function(done) {
-        //uncomment below and update the code to test hooksPost
-        //instance.hooksPost(function(error) {
+    describe('hooksKayakPost', function() {
+      it('should call hooksKayakPost successfully', function(done) {
+        //uncomment below and update the code to test hooksKayakPost
+        //instance.hooksKayakPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

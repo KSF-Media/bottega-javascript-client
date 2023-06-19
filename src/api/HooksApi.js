@@ -48,8 +48,8 @@
 
 
     /**
-     * Callback function to receive the result of the hooksPost operation.
-     * @callback module:api/HooksApi~hooksPostCallback
+     * Callback function to receive the result of the hooksKayakPost operation.
+     * @callback module:api/HooksApi~hooksKayakPostCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -57,19 +57,14 @@
 
     /**
      * Kayak webhook
-     * @param {String} authorization 
      * @param {module:model/KayakWebhookEvent} body 
-     * @param {module:api/HooksApi~hooksPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/HooksApi~hooksKayakPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.hooksPost = function(authorization, body, callback) {
+    this.hooksKayakPost = function(body, callback) {
       var postBody = body;
-      // verify the required parameter 'authorization' is set
-      if (authorization === undefined || authorization === null) {
-        throw new Error("Missing the required parameter 'authorization' when calling hooksPost");
-      }
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling hooksPost");
+        throw new Error("Missing the required parameter 'body' when calling hooksKayakPost");
       }
 
       var pathParams = {
@@ -79,7 +74,6 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'Authorization': authorization
       };
       var formParams = {
       };
@@ -89,7 +83,7 @@
       var accepts = [];
       var returnType = null;
       return this.apiClient.callApi(
-        '/hooks', 'POST',
+        '/hooks/kayak', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
