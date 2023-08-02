@@ -21,5 +21,7 @@ Name | Type | Description | Notes
 **price** | **String** |  | [optional] 
 **invmode** | **String** |  | [optional] 
 **campname** | **String** |  | [optional] 
+**billingPeriod** | **String** |  | [optional] 
+**subscriptionKind** | **String** |  | [optional] 
 
 

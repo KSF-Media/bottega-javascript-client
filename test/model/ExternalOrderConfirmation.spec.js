@@ -158,6 +158,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property billingPeriod (base name: "billing_period")', function() {
+      // uncomment below and update the code to test the property billingPeriod
+      //var instance = new Bottega.ExternalOrderConfirmation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subscriptionKind (base name: "subscription_kind")', function() {
+      // uncomment below and update the code to test the property subscriptionKind
+      //var instance = new Bottega.ExternalOrderConfirmation();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

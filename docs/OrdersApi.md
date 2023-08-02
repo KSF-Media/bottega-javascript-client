@@ -97,7 +97,9 @@ var opts = {
   'productname': "productname_example", // String | 
   'price': "price_example", // String | 
   'invmode': "invmode_example", // String | 
-  'campname': "campname_example" // String | 
+  'campname': "campname_example", // String | 
+  'billingPeriod': "billingPeriod_example", // String | 
+  'subscriptionKind': "subscriptionKind_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -133,6 +135,8 @@ Name | Type | Description  | Notes
  **price** | **String**|  | [optional] 
  **invmode** | **String**|  | [optional] 
  **campname** | **String**|  | [optional] 
+ **billingPeriod** | **String**|  | [optional] 
+ **subscriptionKind** | **String**|  | [optional] 
 
 ### Return type
 

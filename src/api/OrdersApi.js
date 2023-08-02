@@ -124,6 +124,8 @@
      * @param {String} opts.price 
      * @param {String} opts.invmode 
      * @param {String} opts.campname 
+     * @param {String} opts.billingPeriod 
+     * @param {String} opts.subscriptionKind 
      * @param {module:api/OrdersApi~orderConfirmationPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.orderConfirmationPost = function(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, opts, callback) {
@@ -212,7 +214,9 @@
         'productname': opts['productname'],
         'price': opts['price'],
         'invmode': opts['invmode'],
-        'campname': opts['campname']
+        'campname': opts['campname'],
+        'billing_period': opts['billingPeriod'],
+        'subscription_kind': opts['subscriptionKind']
       };
 
       var authNames = [];

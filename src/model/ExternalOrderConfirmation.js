@@ -135,6 +135,12 @@
       if (data.hasOwnProperty('campname')) {
         obj['campname'] = ApiClient.convertToType(data['campname'], 'String');
       }
+      if (data.hasOwnProperty('billing_period')) {
+        obj['billing_period'] = ApiClient.convertToType(data['billing_period'], 'String');
+      }
+      if (data.hasOwnProperty('subscription_kind')) {
+        obj['subscription_kind'] = ApiClient.convertToType(data['subscription_kind'], 'String');
+      }
     }
     return obj;
   }
@@ -207,6 +213,14 @@
    * @member {String} campname
    */
   exports.prototype['campname'] = undefined;
+  /**
+   * @member {String} billing_period
+   */
+  exports.prototype['billing_period'] = undefined;
+  /**
+   * @member {String} subscription_kind
+   */
+  exports.prototype['subscription_kind'] = undefined;
 
 
 
