@@ -60,16 +60,6 @@
         done();
       });
     });
-    describe('orderConfirmationPost', function() {
-      it('should call orderConfirmationPost successfully', function(done) {
-        //uncomment below and update the code to test orderConfirmationPost
-        //instance.orderConfirmationPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('orderGiftGiftCodeGet', function() {
       it('should call orderGiftGiftCodeGet successfully', function(done) {
         //uncomment below and update the code to test orderGiftGiftCodeGet

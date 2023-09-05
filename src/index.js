@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ActiveDays', 'model/CreditCard', 'model/CreditCardRegister', 'model/CreditCardRegisterStatus', 'model/ExternalOrderConfirmation', 'model/Gift', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/KayakWebhookEvent', 'model/KlarnaAddress', 'model/KlarnaConfirmPayment', 'model/KlarnaInitResponse', 'model/KlarnaOrderProduct', 'model/ModelPackage', 'model/Order', 'model/OrderProduct', 'model/OrderSource', 'model/OrderStatus', 'model/PackageCampaign', 'model/PackageOffer', 'model/Paper', 'model/PayOrderRequest', 'model/PaymentTerminalUrl', 'model/Product', 'api/HooksApi', 'api/OrdersApi', 'api/PackagesApi', 'api/PaymentMethodsApi'], factory);
+    define(['ApiClient', 'model/ActiveDays', 'model/CreditCard', 'model/CreditCardRegister', 'model/CreditCardRegisterStatus', 'model/Gift', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/KayakWebhookEvent', 'model/KlarnaAddress', 'model/KlarnaConfirmPayment', 'model/KlarnaInitResponse', 'model/KlarnaOrderProduct', 'model/ModelPackage', 'model/Order', 'model/OrderProduct', 'model/OrderSource', 'model/OrderStatus', 'model/PackageCampaign', 'model/PackageOffer', 'model/Paper', 'model/PayOrderRequest', 'model/PaymentTerminalUrl', 'model/Product', 'api/HooksApi', 'api/OrdersApi', 'api/PackagesApi', 'api/PaymentMethodsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/CreditCard'), require('./model/CreditCardRegister'), require('./model/CreditCardRegisterStatus'), require('./model/ExternalOrderConfirmation'), require('./model/Gift'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/KayakWebhookEvent'), require('./model/KlarnaAddress'), require('./model/KlarnaConfirmPayment'), require('./model/KlarnaInitResponse'), require('./model/KlarnaOrderProduct'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderProduct'), require('./model/OrderSource'), require('./model/OrderStatus'), require('./model/PackageCampaign'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PayOrderRequest'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/HooksApi'), require('./api/OrdersApi'), require('./api/PackagesApi'), require('./api/PaymentMethodsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/CreditCard'), require('./model/CreditCardRegister'), require('./model/CreditCardRegisterStatus'), require('./model/Gift'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/KayakWebhookEvent'), require('./model/KlarnaAddress'), require('./model/KlarnaConfirmPayment'), require('./model/KlarnaInitResponse'), require('./model/KlarnaOrderProduct'), require('./model/ModelPackage'), require('./model/Order'), require('./model/OrderProduct'), require('./model/OrderSource'), require('./model/OrderStatus'), require('./model/PackageCampaign'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PayOrderRequest'), require('./model/PaymentTerminalUrl'), require('./model/Product'), require('./api/HooksApi'), require('./api/OrdersApi'), require('./api/PackagesApi'), require('./api/PaymentMethodsApi'));
   }
-}(function(ApiClient, ActiveDays, CreditCard, CreditCardRegister, CreditCardRegisterStatus, ExternalOrderConfirmation, Gift, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, KayakWebhookEvent, KlarnaAddress, KlarnaConfirmPayment, KlarnaInitResponse, KlarnaOrderProduct, ModelPackage, Order, OrderProduct, OrderSource, OrderStatus, PackageCampaign, PackageOffer, Paper, PayOrderRequest, PaymentTerminalUrl, Product, HooksApi, OrdersApi, PackagesApi, PaymentMethodsApi) {
+}(function(ApiClient, ActiveDays, CreditCard, CreditCardRegister, CreditCardRegisterStatus, Gift, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse415, InlineResponse415UnsupportedMediaType, KayakWebhookEvent, KlarnaAddress, KlarnaConfirmPayment, KlarnaInitResponse, KlarnaOrderProduct, ModelPackage, Order, OrderProduct, OrderSource, OrderStatus, PackageCampaign, PackageOffer, Paper, PayOrderRequest, PaymentTerminalUrl, Product, HooksApi, OrdersApi, PackagesApi, PaymentMethodsApi) {
   'use strict';
 
   /**
@@ -81,11 +81,6 @@
      * @property {module:model/CreditCardRegisterStatus}
      */
     CreditCardRegisterStatus: CreditCardRegisterStatus,
-    /**
-     * The ExternalOrderConfirmation model constructor.
-     * @property {module:model/ExternalOrderConfirmation}
-     */
-    ExternalOrderConfirmation: ExternalOrderConfirmation,
     /**
      * The Gift model constructor.
      * @property {module:model/Gift}

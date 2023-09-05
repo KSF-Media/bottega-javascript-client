@@ -111,7 +111,6 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Bottega.HooksApi* | [**hooksKayakPost**](docs/HooksApi.md#hooksKayakPost) | **POST** /hooks/kayak | 
 *Bottega.OrdersApi* | [**orderCallbackPost**](docs/OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
-*Bottega.OrdersApi* | [**orderConfirmationPost**](docs/OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
 *Bottega.OrdersApi* | [**orderGiftGiftCodeGet**](docs/OrdersApi.md#orderGiftGiftCodeGet) | **GET** /order/gift/{giftCode} | 
 *Bottega.OrdersApi* | [**orderGiftGiftCodePut**](docs/OrdersApi.md#orderGiftGiftCodePut) | **PUT** /order/gift/{giftCode} | 
 *Bottega.OrdersApi* | [**orderInitKlarnaPost**](docs/OrdersApi.md#orderInitKlarnaPost) | **POST** /order/initKlarna | 
@@ -135,7 +134,6 @@ Class | Method | HTTP request | Description
  - [Bottega.CreditCard](docs/CreditCard.md)
  - [Bottega.CreditCardRegister](docs/CreditCardRegister.md)
  - [Bottega.CreditCardRegisterStatus](docs/CreditCardRegisterStatus.md)
- - [Bottega.ExternalOrderConfirmation](docs/ExternalOrderConfirmation.md)
  - [Bottega.Gift](docs/Gift.md)
  - [Bottega.InlineResponse400](docs/InlineResponse400.md)
  - [Bottega.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)

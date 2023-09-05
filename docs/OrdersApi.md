@@ -5,7 +5,6 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**orderCallbackPost**](OrdersApi.md#orderCallbackPost) | **POST** /order/callback | 
-[**orderConfirmationPost**](OrdersApi.md#orderConfirmationPost) | **POST** /order/confirmation | 
 [**orderGiftGiftCodeGet**](OrdersApi.md#orderGiftGiftCodeGet) | **GET** /order/gift/{giftCode} | 
 [**orderGiftGiftCodePut**](OrdersApi.md#orderGiftGiftCodePut) | **PUT** /order/gift/{giftCode} | 
 [**orderInitKlarnaPost**](OrdersApi.md#orderInitKlarnaPost) | **POST** /order/initKlarna | 
@@ -62,93 +61,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json;charset=utf-8
-- **Accept**: Not defined
-
-
-## orderConfirmationPost
-
-> orderConfirmationPost(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, opts)
-
-
-
-Send order confirmation from external order creation
-
-### Example
-
-```javascript
-var Bottega = require('bottega');
-
-var apiInstance = new Bottega.OrdersApi();
-var authorization = "authorization_example"; // String | 
-var cusno = 56; // Number | 
-var email = "email_example"; // String | 
-var name = "name_example"; // String | 
-var lastname = "lastname_example"; // String | 
-var firstname = "firstname_example"; // String | 
-var subscriptionStart = "subscriptionStart_example"; // String | 
-var subscriptionEnd = "subscriptionEnd_example"; // String | 
-var gift = "gift_example"; // String | 
-var paper = "paper_example"; // String | 
-var alias = "alias_example"; // String | 
-var subsno = 56; // Number | 
-var extno = 56; // Number | 
-var productno = "productno_example"; // String | 
-var opts = {
-  'productname': "productname_example", // String | 
-  'price': "price_example", // String | 
-  'invmode': "invmode_example", // String | 
-  'campname': "campname_example", // String | 
-  'billingPeriod': "billingPeriod_example", // String | 
-  'subscriptionKind': "subscriptionKind_example" // String | 
-};
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.orderConfirmationPost(authorization, cusno, email, name, lastname, firstname, subscriptionStart, subscriptionEnd, gift, paper, alias, subsno, extno, productno, opts, callback);
-```
-
-### Parameters
-
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **String**|  | 
- **cusno** | **Number**|  | 
- **email** | **String**|  | 
- **name** | **String**|  | 
- **lastname** | **String**|  | 
- **firstname** | **String**|  | 
- **subscriptionStart** | **String**|  | 
- **subscriptionEnd** | **String**|  | 
- **gift** | **String**|  | 
- **paper** | **String**|  | 
- **alias** | **String**|  | 
- **subsno** | **Number**|  | 
- **extno** | **Number**|  | 
- **productno** | **String**|  | 
- **productname** | **String**|  | [optional] 
- **price** | **String**|  | [optional] 
- **invmode** | **String**|  | [optional] 
- **campname** | **String**|  | [optional] 
- **billingPeriod** | **String**|  | [optional] 
- **subscriptionKind** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/x-www-form-urlencoded
 - **Accept**: Not defined
 
 
