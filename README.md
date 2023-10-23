@@ -115,6 +115,7 @@ Class | Method | HTTP request | Description
 *Bottega.OrdersApi* | [**orderGiftGiftCodePut**](docs/OrdersApi.md#orderGiftGiftCodePut) | **PUT** /order/gift/{giftCode} | 
 *Bottega.OrdersApi* | [**orderInitKlarnaPost**](docs/OrdersApi.md#orderInitKlarnaPost) | **POST** /order/initKlarna | 
 *Bottega.OrdersApi* | [**orderOrderNumberGet**](docs/OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
+*Bottega.OrdersApi* | [**orderOrderNumberIdentifiedGet**](docs/OrdersApi.md#orderOrderNumberIdentifiedGet) | **GET** /order/{orderNumber}/identified | 
 *Bottega.OrdersApi* | [**orderOrderNumberPayPost**](docs/OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 *Bottega.OrdersApi* | [**orderPost**](docs/OrdersApi.md#orderPost) | **POST** /order | 
 *Bottega.OrdersApi* | [**orderProcessOrderGet**](docs/OrdersApi.md#orderProcessOrderGet) | **GET** /order/processOrder | 

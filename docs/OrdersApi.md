@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**orderGiftGiftCodePut**](OrdersApi.md#orderGiftGiftCodePut) | **PUT** /order/gift/{giftCode} | 
 [**orderInitKlarnaPost**](OrdersApi.md#orderInitKlarnaPost) | **POST** /order/initKlarna | 
 [**orderOrderNumberGet**](OrdersApi.md#orderOrderNumberGet) | **GET** /order/{orderNumber} | 
+[**orderOrderNumberIdentifiedGet**](OrdersApi.md#orderOrderNumberIdentifiedGet) | **GET** /order/{orderNumber}/identified | 
 [**orderOrderNumberPayPost**](OrdersApi.md#orderOrderNumberPayPost) | **POST** /order/{orderNumber}/pay | 
 [**orderPost**](OrdersApi.md#orderPost) | **POST** /order | 
 [**orderProcessOrderGet**](OrdersApi.md#orderProcessOrderGet) | **GET** /order/processOrder | 
@@ -262,6 +263,59 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: application/json;charset=utf-8
+
+
+## orderOrderNumberIdentifiedGet
+
+> orderOrderNumberIdentifiedGet(orderNumber, opts)
+
+
+
+Let order proceed after customer identity verification
+
+### Example
+
+```javascript
+var Bottega = require('bottega');
+
+var apiInstance = new Bottega.OrdersApi();
+var orderNumber = "orderNumber_example"; // String | 
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.orderOrderNumberIdentifiedGet(orderNumber, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderNumber** | **String**|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## orderOrderNumberPayPost

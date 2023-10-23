@@ -100,6 +100,16 @@
         done();
       });
     });
+    describe('orderOrderNumberIdentifiedGet', function() {
+      it('should call orderOrderNumberIdentifiedGet successfully', function(done) {
+        //uncomment below and update the code to test orderOrderNumberIdentifiedGet
+        //instance.orderOrderNumberIdentifiedGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('orderOrderNumberPayPost', function() {
       it('should call orderOrderNumberPayPost successfully', function(done) {
         //uncomment below and update the code to test orderOrderNumberPayPost

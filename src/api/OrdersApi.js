@@ -282,6 +282,55 @@
     }
 
     /**
+     * Callback function to receive the result of the orderOrderNumberIdentifiedGet operation.
+     * @callback module:api/OrdersApi~orderOrderNumberIdentifiedGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Let order proceed after customer identity verification
+     * @param {String} orderNumber 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/OrdersApi~orderOrderNumberIdentifiedGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.orderOrderNumberIdentifiedGet = function(orderNumber, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'orderNumber' is set
+      if (orderNumber === undefined || orderNumber === null) {
+        throw new Error("Missing the required parameter 'orderNumber' when calling orderOrderNumberIdentifiedGet");
+      }
+
+      var pathParams = {
+        'orderNumber': orderNumber
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/order/{orderNumber}/identified', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the orderOrderNumberPayPost operation.
      * @callback module:api/OrdersApi~orderOrderNumberPayPostCallback
      * @param {String} error Error message, if any.
