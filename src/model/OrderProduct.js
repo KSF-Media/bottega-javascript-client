@@ -78,6 +78,9 @@
       if (data.hasOwnProperty('gift')) {
         obj['gift'] = ApiClient.convertToType(data['gift'], 'Boolean');
       }
+      if (data.hasOwnProperty('orderSourceArticle')) {
+        obj['orderSourceArticle'] = ApiClient.convertToType(data['orderSourceArticle'], 'String');
+      }
     }
     return obj;
   }
@@ -106,6 +109,10 @@
    * @member {Boolean} gift
    */
   exports.prototype['gift'] = undefined;
+  /**
+   * @member {String} orderSourceArticle
+   */
+  exports.prototype['orderSourceArticle'] = undefined;
 
 
 

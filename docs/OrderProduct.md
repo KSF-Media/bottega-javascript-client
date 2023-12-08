@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **campaignNo** | **Number** |  | [optional] 
 **orderSource** | [**OrderSource**](OrderSource.md) |  | [optional] 
 **gift** | **Boolean** |  | [optional] 
+**orderSourceArticle** | **String** |  | [optional] 
 
 
