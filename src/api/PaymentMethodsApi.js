@@ -105,6 +105,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
+     * @param {String} opts.provider 
      * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
@@ -120,6 +121,7 @@
         'id': id
       };
       var queryParams = {
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };
@@ -261,6 +263,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
+     * @param {String} opts.provider 
      * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardIdRegisterPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CreditCardRegister}
      */
@@ -276,6 +279,7 @@
         'id': id
       };
       var queryParams = {
+        'provider': opts['provider'],
       };
       var collectionQueryParams = {
       };

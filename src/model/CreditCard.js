@@ -74,6 +74,9 @@
       if (data.hasOwnProperty('user')) {
         obj['user'] = ApiClient.convertToType(data['user'], 'String');
       }
+      if (data.hasOwnProperty('provider')) {
+        obj['provider'] = ApiClient.convertToType(data['provider'], 'String');
+      }
       if (data.hasOwnProperty('paymentMethodId')) {
         obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'Number');
       }
@@ -95,6 +98,10 @@
    * @member {String} user
    */
   exports.prototype['user'] = undefined;
+  /**
+   * @member {String} provider
+   */
+  exports.prototype['provider'] = undefined;
   /**
    * @member {Number} paymentMethodId
    */

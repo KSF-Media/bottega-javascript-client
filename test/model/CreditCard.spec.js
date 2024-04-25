@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property provider (base name: "provider")', function() {
+      // uncomment below and update the code to test the property provider
+      //var instance = new Bottega.CreditCard();
+      //expect(instance).to.be();
+    });
+
     it('should have the property paymentMethodId (base name: "paymentMethodId")', function() {
       // uncomment below and update the code to test the property paymentMethodId
       //var instance = new Bottega.CreditCard();

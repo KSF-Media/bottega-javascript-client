@@ -82,7 +82,8 @@ var apiInstance = new Bottega.PaymentMethodsApi();
 var id = 56; // Number | 
 var opts = {
   'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'provider': "provider_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -103,6 +104,7 @@ Name | Type | Description  | Notes
  **id** | **Number**|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
+ **provider** | **String**|  | [optional] 
 
 ### Return type
 
@@ -243,7 +245,8 @@ var apiInstance = new Bottega.PaymentMethodsApi();
 var id = 56; // Number | 
 var opts = {
   'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'provider': "provider_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -264,6 +267,7 @@ Name | Type | Description  | Notes
  **id** | **Number**|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
+ **provider** | **String**|  | [optional] 
 
 ### Return type
 
