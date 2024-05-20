@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardIdRegisterPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterPost) | **POST** /paymentMethod/creditCard/{id}/register | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardRegisterPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardRegisterPost) | **POST** /paymentMethod/creditCard/register | 
 *Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardRegisterProcessGet**](docs/PaymentMethodsApi.md#paymentMethodCreditCardRegisterProcessGet) | **GET** /paymentMethod/creditCard/register/process | 
+*Bottega.PaymentMethodsApi* | [**paymentMethodCreditCardSubscriptionSubsnoRegisterPost**](docs/PaymentMethodsApi.md#paymentMethodCreditCardSubscriptionSubsnoRegisterPost) | **POST** /paymentMethod/creditCard/subscription/{subsno}/register | 
 
 
 ## Documentation for Models

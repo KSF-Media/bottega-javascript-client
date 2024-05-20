@@ -120,6 +120,16 @@
         done();
       });
     });
+    describe('paymentMethodCreditCardSubscriptionSubsnoRegisterPost', function() {
+      it('should call paymentMethodCreditCardSubscriptionSubsnoRegisterPost successfully', function(done) {
+        //uncomment below and update the code to test paymentMethodCreditCardSubscriptionSubsnoRegisterPost
+        //instance.paymentMethodCreditCardSubscriptionSubsnoRegisterPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

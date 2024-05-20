@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**paymentMethodCreditCardIdRegisterPost**](PaymentMethodsApi.md#paymentMethodCreditCardIdRegisterPost) | **POST** /paymentMethod/creditCard/{id}/register | 
 [**paymentMethodCreditCardRegisterPost**](PaymentMethodsApi.md#paymentMethodCreditCardRegisterPost) | **POST** /paymentMethod/creditCard/register | 
 [**paymentMethodCreditCardRegisterProcessGet**](PaymentMethodsApi.md#paymentMethodCreditCardRegisterProcessGet) | **GET** /paymentMethod/creditCard/register/process | 
+[**paymentMethodCreditCardSubscriptionSubsnoRegisterPost**](PaymentMethodsApi.md#paymentMethodCreditCardSubscriptionSubsnoRegisterPost) | **POST** /paymentMethod/creditCard/subscription/{subsno}/register | 
 
 
 
@@ -383,4 +384,59 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: text/html;charset=utf-8
+
+
+## paymentMethodCreditCardSubscriptionSubsnoRegisterPost
+
+> CreditCardRegister paymentMethodCreditCardSubscriptionSubsnoRegisterPost(subsno, opts)
+
+
+
+Register a credit card with payment provider, to replace a card on a subscription
+
+### Example
+
+```javascript
+var Bottega = require('bottega');
+
+var apiInstance = new Bottega.PaymentMethodsApi();
+var subsno = 56; // Number | 
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example", // String | 
+  'provider': "provider_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.paymentMethodCreditCardSubscriptionSubsnoRegisterPost(subsno, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subsno** | **Number**|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+ **provider** | **String**|  | [optional] 
+
+### Return type
+
+[**CreditCardRegister**](CreditCardRegister.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 

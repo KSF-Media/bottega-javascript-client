@@ -388,6 +388,58 @@
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the paymentMethodCreditCardSubscriptionSubsnoRegisterPost operation.
+     * @callback module:api/PaymentMethodsApi~paymentMethodCreditCardSubscriptionSubsnoRegisterPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CreditCardRegister} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Register a credit card with payment provider, to replace a card on a subscription
+     * @param {Number} subsno 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {String} opts.provider 
+     * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardSubscriptionSubsnoRegisterPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CreditCardRegister}
+     */
+    this.paymentMethodCreditCardSubscriptionSubsnoRegisterPost = function(subsno, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'subsno' is set
+      if (subsno === undefined || subsno === null) {
+        throw new Error("Missing the required parameter 'subsno' when calling paymentMethodCreditCardSubscriptionSubsnoRegisterPost");
+      }
+
+      var pathParams = {
+        'subsno': subsno
+      };
+      var queryParams = {
+        'provider': opts['provider'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = CreditCardRegister;
+      return this.apiClient.callApi(
+        '/paymentMethod/creditCard/subscription/{subsno}/register', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
   };
 
   return exports;
