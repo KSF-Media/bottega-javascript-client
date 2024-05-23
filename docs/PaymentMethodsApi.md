@@ -404,6 +404,7 @@ var subsno = 56; // Number |
 var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example", // String | 
+  'callback': "callback_example", // String | 
   'provider': "provider_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -425,6 +426,7 @@ Name | Type | Description  | Notes
  **subsno** | **Number**|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
+ **callback** | **String**|  | [optional] 
  **provider** | **String**|  | [optional] 
 
 ### Return type

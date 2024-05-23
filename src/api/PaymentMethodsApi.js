@@ -403,6 +403,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
+     * @param {module:model/String} opts.callback 
      * @param {String} opts.provider 
      * @param {module:api/PaymentMethodsApi~paymentMethodCreditCardSubscriptionSubsnoRegisterPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CreditCardRegister}
@@ -419,6 +420,7 @@
         'subsno': subsno
       };
       var queryParams = {
+        'callback': opts['callback'],
         'provider': opts['provider'],
       };
       var collectionQueryParams = {
